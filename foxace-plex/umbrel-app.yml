@@ -1,0 +1,32 @@
+manifestVersion: 1
+id: foxace-plex
+name: Plex (Hotio)
+tagline: Serveur multimedia personnel
+icon: https://getumbrel.github.io/umbrel-apps-gallery/plex/icon.svg
+category: media
+version: "1.0.0"
+port: 32400
+description: >-
+  Plex organise vos collections de videos, musiques et photos et les diffuse sur tous vos appareils. Cette version utilise l'image hotio pour une meilleure integration avec l'ecosysteme *arr.
+
+
+  Le volume /mnt est deja configure pour acceder a vos medias depuis Radarr et Sonarr. Vos bibliotheques seront accessibles dans /mnt/media/movies et /mnt/media/tv.
+
+
+  Fonctionnalites: streaming local et distant, transcodage materiel, synchronisation hors ligne, partage avec famille et amis.
+developer: Plex Inc.
+website: https://plex.tv
+submitter: foXaCe
+submission: https://github.com/foXaCe/foxace-umbrel-store
+repo: https://github.com/plexinc/pms-docker
+support: https://forums.plex.tv
+gallery:
+  - https://getumbrel.github.io/umbrel-apps-gallery/plex/1.jpg
+  - https://getumbrel.github.io/umbrel-apps-gallery/plex/2.jpg
+  - https://getumbrel.github.io/umbrel-apps-gallery/plex/3.jpg
+releaseNotes: >-
+  Version initiale avec image hotio et volume /mnt pre-configure pour Radarr/Sonarr.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
