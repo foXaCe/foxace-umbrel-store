@@ -2,7 +2,7 @@ manifestVersion: 1
 id: foxace-plextraktsync
 name: PlexTraktSync
 tagline: Synchronisation bidirectionnelle Plex et Trakt.tv
-icon: https://raw.githubusercontent.com/twolaw/PlexTraktSync/img/plextraktsync_banner.png
+icon: https://walter.trakt.tv/hotlink-ok/public/favicon.svg
 category: media
 version: "latest"
 port: 8282
