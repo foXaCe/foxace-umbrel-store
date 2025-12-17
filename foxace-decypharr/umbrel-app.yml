@@ -2,7 +2,7 @@ manifestVersion: 1
 id: foxace-decypharr
 name: Decypharr
 tagline: An advanced solution for automated Debrid downloads
-icon: https://raw.githubusercontent.com/sirrobot01/decypharr/main/docs/static/img/logo.png
+icon: https://raw.githubusercontent.com/dennysubke/dennys-umbrel-app-gallery/main/denny-decypharr/logo.png
 category: files & productivity
 version: "1.1.6"
 port: 8282
