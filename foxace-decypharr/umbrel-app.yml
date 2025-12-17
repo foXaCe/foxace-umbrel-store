@@ -3,7 +3,7 @@ id: foxace-decypharr
 name: Decypharr
 tagline: Solution avancee pour les telechargements Debrid automatises
 icon: https://raw.githubusercontent.com/dennysubke/dennys-umbrel-app-gallery/main/denny-decypharr/logo.png
-category: files & productivity
+category: media
 version: "1.1.6"
 port: 8282
 description: >-
