@@ -5,7 +5,7 @@ services:
       APP_HOST: foxace-placeholdarr_server_1
       APP_PORT: 8000
   server:
-    image: ghcr.io/theindiearmy/placeholdarr:latest
+    image: ghcr.io/theindiearmy/placeholdarr:queue_monitoring-latest
     environment:
       - PLACEHOLDARR_HOST=0.0.0.0
       - PLACEHOLDARR_PORT=8000
