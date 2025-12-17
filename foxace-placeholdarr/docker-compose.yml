@@ -38,6 +38,11 @@ services:
         # Documentation: https://github.com/TheIndieArmy/Placeholdarr
         # Editez ce fichier via SSH: ~/umbrel/app-data/foxace-placeholdarr/data/env/.env
 
+        # === MEDIA SERVER TOGGLES ===
+        ENABLE_PLEX=true
+        ENABLE_JELLYFIN=false
+        ENABLE_EMBY=false
+
         # === PLEX SETTINGS ===
         PLEX_URL=http://plex_plex_1:32400
         PLEX_TOKEN=your_plex_token_here
