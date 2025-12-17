@@ -1,27 +1,34 @@
 manifestVersion: 1
 id: foxace-prowlarr
 name: Prowlarr (Nightly)
-tagline: Gestionnaire d'indexeurs pour les apps Arr
-icon: https://raw.githubusercontent.com/hotio/hotio.dev/master/docs/images/prowlarr/icon.png
+tagline: Gestionnaire d'indexeurs pour Sonarr, Radarr et plus
+icon: https://getumbrel.github.io/umbrel-apps-gallery/prowlarr/icon.svg
 category: media
 version: "nightly"
 port: 9696
 description: >-
-  Prowlarr est un gestionnaire d'indexeurs qui s'integre parfaitement avec Sonarr, Radarr, Lidarr et Readarr. Il permet de gerer tous vos indexeurs torrent et Usenet depuis une seule interface.
+  Prowlarr est un gestionnaire d'indexeurs concu pour s'integrer avec vos applications PVR comme Sonarr, Radarr, Lidarr et Readarr. Il supporte la gestion des trackers torrent et des indexeurs Usenet.
 
 
-  Cette version utilise l'image hotio avec le tag nightly pour beneficier des dernieres fonctionnalites et corrections. L'image hotio est legere, optimisee et suit les recommandations TRaSH Guides.
+  Une fois configure, Prowlarr synchronise automatiquement vos indexeurs avec toutes vos applications Arr. Plus besoin de configurer les memes indexeurs dans chaque application separement.
 
 
-  Fonctionnalites principales: gestion centralisee des indexeurs, synchronisation automatique avec les apps Arr, recherche unifiee, statistiques d'indexeurs, support torrent et Usenet.
+  Cette version utilise l'image hotio nightly pour beneficier des dernieres fonctionnalites. Prowlarr se connecte automatiquement aux autres apps Arr installees sur votre Umbrel.
+
+
+  Fonctionnalites: gestion centralisee des indexeurs, synchronisation automatique avec Sonarr/Radarr/Lidarr, recherche unifiee, statistiques, support torrent et Usenet, integration FlareSolverr.
 developer: Prowlarr Team
 website: https://prowlarr.com
 submitter: foXaCe
 submission: https://github.com/foXaCe/foxace-umbrel-store
 repo: https://github.com/Prowlarr/Prowlarr
 support: https://github.com/Prowlarr/Prowlarr/issues
+gallery:
+  - https://getumbrel.github.io/umbrel-apps-gallery/prowlarr/1.jpg
+  - https://getumbrel.github.io/umbrel-apps-gallery/prowlarr/2.jpg
+  - https://getumbrel.github.io/umbrel-apps-gallery/prowlarr/3.jpg
 releaseNotes: >-
-  Version nightly - Dernieres fonctionnalites et corrections en avant-premiere.
+  Version nightly hotio - Dernieres fonctionnalites et corrections en avant-premiere.
 dependencies: []
 path: ""
 defaultUsername: ""

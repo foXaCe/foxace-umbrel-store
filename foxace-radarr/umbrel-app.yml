@@ -1,27 +1,34 @@
 manifestVersion: 1
 id: foxace-radarr
 name: Radarr (Nightly)
-tagline: Gestionnaire automatise de films
-icon: https://raw.githubusercontent.com/hotio/hotio.dev/master/docs/images/radarr/icon.png
+tagline: Gestionnaire de collection de films
+icon: https://getumbrel.github.io/umbrel-apps-gallery/radarr/icon.svg
 category: media
 version: "nightly"
 port: 7878
 description: >-
-  Radarr est un gestionnaire de collections de films qui surveille automatiquement plusieurs flux RSS pour trouver de nouveaux films. Il interface avec les clients Usenet et BitTorrent pour telecharger, trier et renommer automatiquement vos films.
+  Radarr est un gestionnaire de collection de films pour les utilisateurs Usenet et BitTorrent. Il surveille plusieurs flux RSS pour trouver de nouveaux films et les telecharge, trie et renomme automatiquement.
 
 
-  Cette version utilise l'image hotio avec le tag nightly pour beneficier des dernieres fonctionnalites et corrections. L'image hotio est legere, optimisee et suit les recommandations TRaSH Guides.
+  Quand une meilleure qualite devient disponible, Radarr met automatiquement a niveau vos fichiers existants. Il s'integre parfaitement avec vos clients de telechargement comme Transmission, qBittorrent et SABnzbd.
 
 
-  Fonctionnalites principales: surveillance automatique des films, integration avec les indexeurs via Prowlarr, gestion de la qualite, renommage automatique, listes de films automatiques.
+  Cette version utilise l'image hotio nightly pour beneficier des dernieres fonctionnalites. Pour configurer les indexeurs, utilisez Prowlarr qui synchronise automatiquement vos indexeurs avec Radarr.
+
+
+  Fonctionnalites: surveillance automatique des films, listes automatiques (IMDB, Trakt), gestion de la qualite, renommage automatique, integration Prowlarr, notifications.
 developer: Radarr Team
 website: https://radarr.video
 submitter: foXaCe
 submission: https://github.com/foXaCe/foxace-umbrel-store
 repo: https://github.com/Radarr/Radarr
 support: https://github.com/Radarr/Radarr/issues
+gallery:
+  - https://getumbrel.github.io/umbrel-apps-gallery/radarr/1.jpg
+  - https://getumbrel.github.io/umbrel-apps-gallery/radarr/2.jpg
+  - https://getumbrel.github.io/umbrel-apps-gallery/radarr/3.jpg
 releaseNotes: >-
-  Version nightly - Dernieres fonctionnalites et corrections en avant-premiere.
+  Version nightly hotio - Dernieres fonctionnalites et corrections en avant-premiere.
 dependencies: []
 path: ""
 defaultUsername: ""

@@ -1,27 +1,34 @@
 manifestVersion: 1
 id: foxace-sonarr
 name: Sonarr (Nightly)
-tagline: Gestionnaire automatise de series TV
-icon: https://raw.githubusercontent.com/hotio/hotio.dev/master/docs/images/sonarr/icon.png
+tagline: PVR intelligent pour les series TV
+icon: https://getumbrel.github.io/umbrel-apps-gallery/sonarr/icon.svg
 category: media
 version: "nightly"
 port: 8989
 description: >-
-  Sonarr est un gestionnaire de collections de series TV qui surveille automatiquement plusieurs flux RSS pour trouver de nouveaux episodes. Il interface avec les clients Usenet et BitTorrent pour telecharger, trier et renommer automatiquement vos series.
+  Sonarr est un PVR (enregistreur video personnel) pour les utilisateurs Usenet et BitTorrent. Il surveille plusieurs flux RSS pour trouver de nouveaux episodes de vos series preferees et les telecharge, trie et renomme automatiquement.
 
 
-  Cette version utilise l'image hotio avec le tag nightly pour beneficier des dernieres fonctionnalites et corrections. L'image hotio est legere, optimisee et suit les recommandations TRaSH Guides.
+  Quand une meilleure qualite devient disponible, Sonarr met automatiquement a niveau vos fichiers existants. Il s'integre parfaitement avec vos clients de telechargement comme Transmission, qBittorrent et SABnzbd.
 
 
-  Fonctionnalites principales: surveillance automatique des series, integration avec les indexeurs via Prowlarr, gestion de la qualite, renommage automatique, calendrier des sorties.
+  Cette version utilise l'image hotio nightly pour beneficier des dernieres fonctionnalites. Pour configurer les indexeurs, utilisez Prowlarr qui synchronise automatiquement vos indexeurs avec Sonarr.
+
+
+  Fonctionnalites: surveillance automatique des series, calendrier des episodes, gestion de la qualite, renommage automatique, integration Prowlarr, notifications.
 developer: Sonarr Team
 website: https://sonarr.tv
 submitter: foXaCe
 submission: https://github.com/foXaCe/foxace-umbrel-store
 repo: https://github.com/Sonarr/Sonarr
 support: https://github.com/Sonarr/Sonarr/issues
+gallery:
+  - https://getumbrel.github.io/umbrel-apps-gallery/sonarr/1.jpg
+  - https://getumbrel.github.io/umbrel-apps-gallery/sonarr/2.jpg
+  - https://getumbrel.github.io/umbrel-apps-gallery/sonarr/3.jpg
 releaseNotes: >-
-  Version nightly - Dernieres fonctionnalites et corrections en avant-premiere.
+  Version nightly hotio - Dernieres fonctionnalites et corrections en avant-premiere.
 dependencies: []
 path: ""
 defaultUsername: ""
