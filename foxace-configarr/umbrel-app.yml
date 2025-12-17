@@ -10,13 +10,13 @@ description: >-
   Configarr simplifie la configuration et la synchronisation de Sonarr et Radarr avec les TRaSH Guides. Il gere automatiquement les formats personnalises, les profils de qualite et autres parametres.
 
 
-  Il fusionne les configurations de plusieurs sources: TRaSH-Guides, fichiers locaux et votre propre configuration. Supporte Radarr v5 et Sonarr v4 officiellement, ainsi que Whisparr, Readarr et Lidarr experimentalement.
+  IMPORTANT: Cette application n'a pas d'interface web. C'est un outil en ligne de commande. Apres l'installation, editez les fichiers config.yml et secrets.yml dans le dossier de l'app via SSH ou Portainer, puis executez 'configarr' dans le conteneur.
 
 
-  Configarr est une alternative a Recyclarr et Notifiarr avec un support plus large des specifications. Il permet de maintenir vos configurations Arr a jour avec les meilleures pratiques de la communaute.
+  Configuration: Les fichiers templates sont crees automatiquement au premier demarrage. Modifiez secrets.yml pour ajouter vos cles API Sonarr/Radarr, puis ajustez config.yml selon vos besoins. Executez ensuite: docker exec foxace-configarr_server_1 configarr
 
 
-  Fonctionnalites: synchronisation TRaSH Guides, formats personnalises, profils de qualite, configurations multi-sources, support multilingue.
+  Fonctionnalites: synchronisation TRaSH Guides, formats personnalises, profils de qualite, support Radarr v5 et Sonarr v4, alternative a Recyclarr.
 developer: Raydak Labs
 website: https://configarr.de
 submitter: foXaCe
