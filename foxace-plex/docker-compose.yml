@@ -4,6 +4,8 @@ services:
     environment:
       APP_HOST: foxace-plex_server_1
       APP_PORT: 32400
+    networks:
+      default:
   server:
     image: ghcr.io/hotio/plex:latest
     ports:
