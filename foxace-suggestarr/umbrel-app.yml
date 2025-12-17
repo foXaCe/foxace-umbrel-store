@@ -1,27 +1,34 @@
 manifestVersion: 1
 id: foxace-suggestarr
 name: SuggestArr
-tagline: Recommandations automatiques basees sur votre activite media
-icon: https://raw.githubusercontent.com/giuseppe99barchetta/SuggestArr/main/src/static/images/suggestarr.png
+tagline: Recommandations media automatiques basees sur votre activite
+icon: https://raw.githubusercontent.com/giuseppe99barchetta/SuggestArr/main/client/public/images/default1.jpg
 category: media
 version: "latest"
 port: 5000
 description: >-
-  SuggestArr automatise les recommandations de contenu media et les demandes de telechargement basees sur l'activite des utilisateurs dans les serveurs media comme Jellyfin, Plex et Emby.
+  SuggestArr automatise les recommandations de contenu media et les demandes de telechargement basees sur l'activite des utilisateurs dans vos serveurs media comme Jellyfin, Plex et Emby.
 
 
-  Il s'integre avec TMDb pour trouver du contenu similaire et envoie des demandes automatiques a Jellyseerr ou Overseerr. Par exemple, si un utilisateur regarde beaucoup de films d'action, SuggestArr trouvera des films similaires et les ajoutera automatiquement a la liste de demandes.
+  Il analyse ce que vous regardez et utilise TMDb pour trouver du contenu similaire. Les recommandations sont ensuite envoyees automatiquement a Jellyseerr ou Overseerr pour etre ajoutees a votre liste de demandes. Par exemple, si vous regardez beaucoup de films d'action, SuggestArr trouvera des films similaires automatiquement.
 
 
-  Fonctionnalites: support multi-serveurs (Jellyfin, Plex, Emby), interface web de configuration, visualisation des logs en temps reel, planification cron depuis l'interface, flexibilite de base de donnees (SQLite, PostgreSQL, MySQL).
+  L'interface web permet de configurer les sources, visualiser les logs en temps reel et planifier les taches via cron. Supporte plusieurs bases de donnees: SQLite, PostgreSQL et MySQL.
+
+
+  Fonctionnalites: analyse de l'activite utilisateur, recommandations intelligentes via TMDb, integration Jellyseerr/Overseerr, support multi-serveurs (Jellyfin, Plex, Emby), interface web intuitive, planification cron.
 developer: Giuseppe Barchetta
 website: https://github.com/giuseppe99barchetta/SuggestArr
 submitter: foXaCe
 submission: https://github.com/foXaCe/foxace-umbrel-store
 repo: https://github.com/giuseppe99barchetta/SuggestArr
 support: https://github.com/giuseppe99barchetta/SuggestArr/issues
+gallery:
+  - https://raw.githubusercontent.com/giuseppe99barchetta/SuggestArr/main/client/public/images/default1.jpg
+  - https://raw.githubusercontent.com/giuseppe99barchetta/SuggestArr/main/client/public/images/default2.jpg
+  - https://raw.githubusercontent.com/giuseppe99barchetta/SuggestArr/main/client/public/images/default3.jpg
 releaseNotes: >-
-  Recommandations automatiques de contenu media basees sur l'activite utilisateur.
+  Recommandations automatiques de contenu media basees sur votre activite de visionnage.
 dependencies: []
 path: ""
 defaultUsername: ""
