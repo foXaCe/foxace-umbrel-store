@@ -18,6 +18,17 @@ services:
       - /bin/sh
       - -c
       - |
+        # Create required directories
+        mkdir -p /data/media/movies /data/media/tv /app/envdir
+
+        # Create dummy placeholder file if it doesn't exist
+        if [ ! -f /app/data/placeholder.mp4 ]; then
+          echo "Creating placeholder video file..."
+          # Create a minimal valid mp4 file (ftyp box only - smallest valid mp4)
+          printf '\x00\x00\x00\x14ftypmp42\x00\x00\x00\x00mp42mp41' > /app/data/placeholder.mp4
+        fi
+
+        # Setup .env file
         if [ ! -f /app/.env ]; then
           if [ -f /app/envdir/.env ]; then
             ln -sf /app/envdir/.env /app/.env
