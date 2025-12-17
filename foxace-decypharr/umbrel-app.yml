@@ -1,0 +1,20 @@
+manifestVersion: 1
+id: foxace-decypharr
+name: Decypharr
+tagline: An advanced solution for automated Debrid downloads
+icon: https://raw.githubusercontent.com/sirrobot01/decypharr/main/docs/static/img/logo.png
+category: files & productivity
+version: "1.1.6"
+port: 8282
+description: >-
+  Decypharr is a qBittorrent compatible API with Debrid support (Real Debrid, All Debrid, Torbox, Debrid Link). Works seamlessly with Sonarr, Radarr and Lidarr.
+developer: Mukhtar Akere
+website: https://github.com/sirrobot01/decypharr
+repo: https://github.com/sirrobot01/decypharr
+support: https://github.com/sirrobot01/decypharr/issues
+releaseNotes: >-
+  v1.1.6 - Tracker URL stripping, rclone fix, WebDAV fix, multi-season fix.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""

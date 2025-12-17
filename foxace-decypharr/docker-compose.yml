@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: foxace-decypharr_web_1
+      APP_PORT: 8282
+  web:
+    image: cy01/blackhole:latest
+    volumes:
+      - ${APP_DATA_DIR}/data/configs:/app
+      - ${UMBREL_ROOT}/data/storage:/mnt:rshared
+    devices:
+      - /dev/fuse:/dev/fuse:rwm
+    cap_add:
+      - SYS_ADMIN
+    security_opt:
+      - apparmor:unconfined
+    restart: on-failure
