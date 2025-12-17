@@ -1,0 +1,28 @@
+manifestVersion: 1
+id: foxace-suggestarr
+name: SuggestArr
+tagline: Recommandations automatiques basees sur votre activite media
+icon: https://raw.githubusercontent.com/giuseppe99barchetta/SuggestArr/main/src/static/images/suggestarr.png
+category: media
+version: "latest"
+port: 5000
+description: >-
+  SuggestArr automatise les recommandations de contenu media et les demandes de telechargement basees sur l'activite des utilisateurs dans les serveurs media comme Jellyfin, Plex et Emby.
+
+
+  Il s'integre avec TMDb pour trouver du contenu similaire et envoie des demandes automatiques a Jellyseerr ou Overseerr. Par exemple, si un utilisateur regarde beaucoup de films d'action, SuggestArr trouvera des films similaires et les ajoutera automatiquement a la liste de demandes.
+
+
+  Fonctionnalites: support multi-serveurs (Jellyfin, Plex, Emby), interface web de configuration, visualisation des logs en temps reel, planification cron depuis l'interface, flexibilite de base de donnees (SQLite, PostgreSQL, MySQL).
+developer: Giuseppe Barchetta
+website: https://github.com/giuseppe99barchetta/SuggestArr
+submitter: foXaCe
+submission: https://github.com/foXaCe/foxace-umbrel-store
+repo: https://github.com/giuseppe99barchetta/SuggestArr
+support: https://github.com/giuseppe99barchetta/SuggestArr/issues
+releaseNotes: >-
+  Recommandations automatiques de contenu media basees sur l'activite utilisateur.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
