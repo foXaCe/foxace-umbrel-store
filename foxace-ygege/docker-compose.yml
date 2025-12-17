@@ -10,17 +10,17 @@ services:
       - TZ=Europe/Paris
     volumes:
       - ${APP_DATA_DIR}/data/sessions:/app/sessions
-      - ${APP_DATA_DIR}/data/config:/config
+      - ${APP_DATA_DIR}/data/config:/app/config
     entrypoint:
       - /bin/sh
       - -c
       - |
         # Create config directory
-        mkdir -p /config
+        mkdir -p /app/config
 
         # Create default config.json if it doesn't exist
-        if [ ! -f /config/config.json ]; then
-          cat > /config/config.json << 'EOF'
+        if [ ! -f /app/config/config.json ]; then
+          cat > /app/config/config.json << 'EOF'
         {
           "username": "YOUR_YGG_USERNAME",
           "password": "YOUR_YGG_PASSWORD",
@@ -31,7 +31,7 @@ services:
           "ygg_domain": null
         }
         EOF
-          echo "Config created at /config/config.json - edit it with your YGG credentials!"
+          echo "Config created at /app/config/config.json - edit it with your YGG credentials!"
           echo "On Umbrel: ~/umbrel/app-data/foxace-ygege/data/config/config.json"
         fi
 

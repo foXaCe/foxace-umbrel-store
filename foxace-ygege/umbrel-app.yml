@@ -4,7 +4,7 @@ name: Ygege
 tagline: Indexeur YGG Torrent rapide pour Prowlarr/Jackett
 icon: https://raw.githubusercontent.com/UwUDev/ygege/develop/website/img/ygege-logo.png
 category: media
-version: "1.0.1"
+version: "1.0.2"
 port: 8715
 description: >-
   Ygege est un indexeur haute performance pour YGG Torrent ecrit en Rust. Il fournit une recherche quasi instantanee avec un faible usage memoire (14.7MB).
@@ -27,7 +27,7 @@ gallery:
   - https://raw.githubusercontent.com/UwUDev/ygege/develop/website/img/ygege-logo-text.png
   - https://raw.githubusercontent.com/UwUDev/ygege/develop/website/img/prowlarr-ygege-config.png
 releaseNotes: >-
-  v1.0.1: Creation automatique du fichier config.json avec placeholders. Editez vos identifiants YGG apres installation.
+  v1.0.2: Correction du chemin de configuration - le fichier config.json est maintenant correctement lu par l'application.
 dependencies: []
 path: ""
 defaultUsername: ""
