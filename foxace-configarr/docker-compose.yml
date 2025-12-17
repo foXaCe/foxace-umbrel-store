@@ -11,5 +11,5 @@ services:
       - TZ=Europe/Paris
     volumes:
       - ${APP_DATA_DIR}/data:/app/config
-    command: ["sleep", "infinity"]
+    entrypoint: ["tail", "-f", "/dev/null"]
     restart: on-failure
