@@ -4,7 +4,7 @@ name: Sonarr (Nightly)
 tagline: PVR intelligent pour les series TV
 icon: https://getumbrel.github.io/umbrel-apps-gallery/sonarr/icon.svg
 category: media
-version: "1.0.2"
+version: "1.0.3"
 port: 8989
 description: >-
   Sonarr est un PVR (enregistreur video personnel) pour les utilisateurs Usenet et BitTorrent. Il surveille plusieurs flux RSS pour trouver de nouveaux episodes de vos series preferees et les telecharge, trie et renomme automatiquement.
@@ -28,7 +28,7 @@ gallery:
   - https://getumbrel.github.io/umbrel-apps-gallery/sonarr/2.jpg
   - https://getumbrel.github.io/umbrel-apps-gallery/sonarr/3.jpg
 releaseNotes: >-
-  v1.0.2: Ajout du reseau Docker umbrel_main_network pour communication entre apps.
+  v1.0.3: Correction du chemin de volume - utilise home/ au lieu de data/storage.
 dependencies: []
 path: ""
 defaultUsername: ""
