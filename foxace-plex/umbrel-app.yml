@@ -4,7 +4,7 @@ name: Plex (Hotio)
 tagline: Serveur multimedia personnel
 icon: https://getumbrel.github.io/umbrel-apps-gallery/plex/icon.svg
 category: media
-version: "1.0.2"
+version: "1.0.3"
 port: 32400
 description: >-
   Plex organise vos collections de videos, musiques et photos et les diffuse sur tous vos appareils. Cette version utilise l'image hotio pour une meilleure integration avec l'ecosysteme *arr.
@@ -25,7 +25,7 @@ gallery:
   - https://getumbrel.github.io/umbrel-apps-gallery/plex/2.jpg
   - https://getumbrel.github.io/umbrel-apps-gallery/plex/3.jpg
 releaseNotes: >-
-  v1.0.2: Ajout du reseau pour app_proxy pour permettre la resolution DNS.
+  v1.0.3: Suppression des ports exposes - le proxy gere les ports.
 dependencies: []
 path: ""
 defaultUsername: ""
