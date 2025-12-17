@@ -23,6 +23,8 @@ submitter: foXaCe
 submission: https://github.com/foXaCe/foxace-umbrel-store
 repo: https://github.com/Taxel/PlexTraktSync
 support: https://github.com/Taxel/PlexTraktSync/issues
+gallery:
+  - https://raw.githubusercontent.com/twolaw/PlexTraktSync/img/plextraktsync_banner.png
 releaseNotes: >-
   Synchronisation automatique Plex-Trakt toutes les 2 heures. Service background sans interface web.
 dependencies: []
