@@ -1,22 +1,22 @@
 manifestVersion: 1
 id: foxace-decypharr
 name: Decypharr
-tagline: An advanced solution for automated Debrid downloads
+tagline: Solution avancee pour les telechargements Debrid automatises
 icon: https://raw.githubusercontent.com/dennysubke/dennys-umbrel-app-gallery/main/denny-decypharr/logo.png
 category: files & productivity
 version: "1.1.6"
 port: 8282
 description: >-
-  Decypharr is an open source application written in Go that acts as a qBittorrent compatible API while integrating support for popular Debrid services such as Real Debrid, All Debrid, Torbox and Debrid Link. It is designed for seamless integration with automation tools like Sonarr, Radarr and Lidarr which can interact with it as if it were a standard qBittorrent client. This allows users to automate the process of downloading torrents through their premium Debrid accounts without needing to run a traditional torrent client or maintain their own seedbox.
+  Decypharr est une application open source ecrite en Go qui agit comme une API compatible qBittorrent tout en integrant les services Debrid populaires tels que Real Debrid, All Debrid, Torbox et Debrid Link. Elle est concue pour une integration transparente avec les outils d'automatisation comme Sonarr, Radarr et Lidarr qui peuvent interagir avec elle comme s'il s'agissait d'un client qBittorrent standard. Cela permet aux utilisateurs d'automatiser le telechargement de torrents via leurs comptes Debrid premium sans avoir besoin d'un client torrent traditionnel ou d'une seedbox.
 
 
-  The core functionality of Decypharr centers on intercepting torrent and magnet links from the connected automation tools and passing them to the configured Debrid services. These services handle the torrent download on their own infrastructure and provide direct download links which Decypharr then manages locally. The software includes a simple and functional web user interface that gives users the ability to monitor and manage the status of their downloads.
+  La fonctionnalite principale de Decypharr consiste a intercepter les liens torrent et magnet des outils d'automatisation connectes et a les transmettre aux services Debrid configures. Ces services gerent le telechargement sur leur propre infrastructure et fournissent des liens de telechargement direct que Decypharr gere ensuite localement. Le logiciel inclut une interface web simple et fonctionnelle permettant de surveiller et gerer l'etat des telechargements.
 
 
-  In addition to its API compatibility and Debrid integration Decypharr offers a built in WebDAV server for accessing downloaded files as well as a symlink manager that ensures files are correctly linked for media library updates. It also includes repair workers that check for missing or broken symlinks and automatically correct them providing a reliable experience especially when dealing with large automated libraries. Decypharr is actively maintained and offers a modern alternative to older tools like Zurg by combining speed simplicity and advanced features such as WebDAV and symlink repair in a single solution.
+  En plus de sa compatibilite API et de son integration Debrid, Decypharr offre un serveur WebDAV integre pour acceder aux fichiers telecharges ainsi qu'un gestionnaire de liens symboliques qui assure que les fichiers sont correctement lies pour les mises a jour de la mediatheque. Il inclut egalement des workers de reparation qui verifient les liens symboliques manquants ou casses et les corrigent automatiquement. Decypharr est une alternative moderne a des outils comme Zurg, combinant rapidite, simplicite et fonctionnalites avancees.
 
 
-  For configuration, you should visit the official documentation at https://sirrobot01.github.io/decypharr/
+  Pour la configuration, consultez la documentation officielle : https://sirrobot01.github.io/decypharr/
 developer: Mukhtar Akere
 website: https://github.com/sirrobot01/decypharr
 submitter: foXaCe
@@ -30,7 +30,7 @@ gallery:
   - https://raw.githubusercontent.com/dennysubke/dennys-umbrel-app-gallery/main/denny-decypharr/4.jpg
   - https://raw.githubusercontent.com/dennysubke/dennys-umbrel-app-gallery/main/denny-decypharr/5.jpg
 releaseNotes: >-
-  Version 1.1.6 adds torrent tracker URL stripping for private trackers, fixes rclone operations on Windows, resolves WebDAV file removal regression, and fixes multi-season file deletion bug.
+  Version 1.1.6 ajoute la suppression des URLs de trackers pour les trackers prives, corrige les operations rclone sur Windows, resout une regression WebDAV et corrige un bug de suppression de fichiers multi-saisons.
 dependencies: []
 path: ""
 defaultUsername: ""
