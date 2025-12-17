@@ -1,0 +1,31 @@
+manifestVersion: 1
+id: foxace-placeholdarr
+name: Placeholdarr
+tagline: Placeholders pour contenus non telecharges dans Plex/Jellyfin
+icon: https://avatars.githubusercontent.com/u/66705353?v=4
+category: media
+version: "latest"
+port: 8000
+description: >-
+  Placeholdarr cree des fichiers placeholder legers pour le contenu indisponible, permettant de parcourir des collections media completes sans avoir besoin de tout telecharger.
+
+
+  Quand vous lancez un placeholder, Placeholdarr declenche automatiquement le telechargement via Radarr/Sonarr. Une fois telecharge, le placeholder est remplace par le vrai fichier. Vous pouvez aussi configurer le remplacement automatique du contenu regarde par des placeholders pour economiser de l'espace.
+
+
+  Fonctionnalites: creation de placeholders pour films et series, integration Plex/Jellyfin/Emby, declenchement automatique des telechargements, suivi du calendrier Radarr/Sonarr, gestion par episode/saison/serie, optimisation du stockage.
+
+
+  Configuration: necessite les URLs et cles API de Radarr/Sonarr, ainsi que le token Plex ou les identifiants Jellyfin.
+developer: TheIndieArmy
+website: https://github.com/TheIndieArmy/placeholdarr
+submitter: foXaCe
+submission: https://github.com/foXaCe/foxace-umbrel-store
+repo: https://github.com/TheIndieArmy/placeholdarr
+support: https://github.com/TheIndieArmy/placeholdarr/issues
+releaseNotes: >-
+  Placeholders intelligents pour bibliotheques media avec telechargement automatique a la demande.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
