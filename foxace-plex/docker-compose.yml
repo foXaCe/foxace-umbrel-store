@@ -16,7 +16,7 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
       - ${APP_DATA_DIR}/data/transcode:/transcode
-      - ${UMBREL_ROOT}/home:/mnt:rshared
+      - ${UMBREL_ROOT}/home:/mnt:rslave
     devices:
       - /dev/dri:/dev/dri
     restart: on-failure
