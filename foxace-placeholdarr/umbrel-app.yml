@@ -16,7 +16,7 @@ description: >-
   Fonctionnalites: creation de placeholders pour films et series, integration Plex/Jellyfin/Emby, declenchement automatique des telechargements, suivi du calendrier Radarr/Sonarr, gestion par episode/saison/serie, optimisation du stockage.
 
 
-  Configuration: necessite les URLs et cles API de Radarr/Sonarr, ainsi que le token Plex ou les identifiants Jellyfin.
+  IMPORTANT: Apres installation, editez le fichier .env via SSH: ~/umbrel/app-data/foxace-placeholdarr/data/env/.env - Configurez les URLs et cles API de Radarr/Sonarr et le token Plex, puis redemarrez l'app.
 developer: TheIndieArmy
 website: https://github.com/TheIndieArmy/placeholdarr
 submitter: foXaCe

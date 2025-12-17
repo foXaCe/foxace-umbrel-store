@@ -12,5 +12,52 @@ services:
       - TZ=Europe/Paris
     volumes:
       - ${APP_DATA_DIR}/data/config:/app/data
+      - ${APP_DATA_DIR}/data/env:/app/envdir
       - ${UMBREL_ROOT}/data/storage:/data
+    entrypoint:
+      - /bin/sh
+      - -c
+      - |
+        if [ ! -f /app/.env ]; then
+          if [ -f /app/envdir/.env ]; then
+            ln -sf /app/envdir/.env /app/.env
+          else
+            cat > /app/envdir/.env << 'ENVEOF'
+        # Placeholdarr Configuration
+        # Documentation: https://github.com/TheIndieArmy/Placeholdarr
+        # Editez ce fichier via SSH: ~/umbrel/app-data/foxace-placeholdarr/data/env/.env
+
+        # === PLEX SETTINGS ===
+        PLEX_URL=http://plex_plex_1:32400
+        PLEX_TOKEN=your_plex_token_here
+
+        # === RADARR SETTINGS ===
+        RADARR_URL=http://foxace-radarr_server_1:7878
+        RADARR_API_KEY=your_radarr_api_key_here
+
+        # === SONARR SETTINGS ===
+        SONARR_URL=http://foxace-sonarr_server_1:8989
+        SONARR_API_KEY=your_sonarr_api_key_here
+
+        # === LIBRARY FOLDERS ===
+        MOVIE_LIBRARY_FOLDER=/data/media/movies
+        TV_LIBRARY_FOLDER=/data/media/tv
+
+        # === PLACEHOLDER FILE ===
+        DUMMY_FILE_PATH=/app/data/placeholder.mp4
+
+        # === OPTIONAL SETTINGS ===
+        PLACEHOLDER_STRATEGY=hardlink
+        TV_PLAY_MODE=episode
+        TITLE_UPDATES=REQUEST
+        INCLUDE_SPECIALS=false
+        EPISODES_LOOKAHEAD=3
+        MAX_MONITOR_TIME=86400
+        CHECK_INTERVAL=60
+        ENVEOF
+            ln -sf /app/envdir/.env /app/.env
+            echo "Created default .env - configure it in ~/umbrel/app-data/foxace-placeholdarr/data/env/.env"
+          fi
+        fi
+        exec uvicorn main:app --host 0.0.0.0 --port 8000
     restart: on-failure
