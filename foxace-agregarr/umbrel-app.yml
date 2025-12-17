@@ -2,7 +2,7 @@ manifestVersion: 1
 id: foxace-agregarr
 name: Agregarr
 tagline: Gestionnaire de collections Plex automatise
-icon: https://raw.githubusercontent.com/agregarr/agregarr/latest/public/logo_full.png
+icon: https://raw.githubusercontent.com/agregarr/agregarr/latest/public/os_icon_filled.svg
 category: media
 version: "latest"
 port: 7171
