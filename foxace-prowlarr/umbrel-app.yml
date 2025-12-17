@@ -1,0 +1,28 @@
+manifestVersion: 1
+id: foxace-prowlarr
+name: Prowlarr (Nightly)
+tagline: Gestionnaire d'indexeurs pour les apps Arr
+icon: https://raw.githubusercontent.com/hotio/hotio.dev/master/docs/images/prowlarr/icon.png
+category: media
+version: "nightly"
+port: 9696
+description: >-
+  Prowlarr est un gestionnaire d'indexeurs qui s'integre parfaitement avec Sonarr, Radarr, Lidarr et Readarr. Il permet de gerer tous vos indexeurs torrent et Usenet depuis une seule interface.
+
+
+  Cette version utilise l'image hotio avec le tag nightly pour beneficier des dernieres fonctionnalites et corrections. L'image hotio est legere, optimisee et suit les recommandations TRaSH Guides.
+
+
+  Fonctionnalites principales: gestion centralisee des indexeurs, synchronisation automatique avec les apps Arr, recherche unifiee, statistiques d'indexeurs, support torrent et Usenet.
+developer: Prowlarr Team
+website: https://prowlarr.com
+submitter: foXaCe
+submission: https://github.com/foXaCe/foxace-umbrel-store
+repo: https://github.com/Prowlarr/Prowlarr
+support: https://github.com/Prowlarr/Prowlarr/issues
+releaseNotes: >-
+  Version nightly - Dernieres fonctionnalites et corrections en avant-premiere.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""

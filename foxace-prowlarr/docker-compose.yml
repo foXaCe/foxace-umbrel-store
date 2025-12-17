@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: foxace-prowlarr_server_1
+      APP_PORT: 9696
+  server:
+    image: ghcr.io/hotio/prowlarr:nightly
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - UMASK=002
+      - TZ=Europe/Paris
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/config
+    restart: on-failure

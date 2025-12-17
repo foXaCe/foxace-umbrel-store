@@ -1,0 +1,28 @@
+manifestVersion: 1
+id: foxace-sonarr
+name: Sonarr (Nightly)
+tagline: Gestionnaire automatise de series TV
+icon: https://raw.githubusercontent.com/hotio/hotio.dev/master/docs/images/sonarr/icon.png
+category: media
+version: "nightly"
+port: 8989
+description: >-
+  Sonarr est un gestionnaire de collections de series TV qui surveille automatiquement plusieurs flux RSS pour trouver de nouveaux episodes. Il interface avec les clients Usenet et BitTorrent pour telecharger, trier et renommer automatiquement vos series.
+
+
+  Cette version utilise l'image hotio avec le tag nightly pour beneficier des dernieres fonctionnalites et corrections. L'image hotio est legere, optimisee et suit les recommandations TRaSH Guides.
+
+
+  Fonctionnalites principales: surveillance automatique des series, integration avec les indexeurs via Prowlarr, gestion de la qualite, renommage automatique, calendrier des sorties.
+developer: Sonarr Team
+website: https://sonarr.tv
+submitter: foXaCe
+submission: https://github.com/foXaCe/foxace-umbrel-store
+repo: https://github.com/Sonarr/Sonarr
+support: https://github.com/Sonarr/Sonarr/issues
+releaseNotes: >-
+  Version nightly - Dernieres fonctionnalites et corrections en avant-premiere.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""

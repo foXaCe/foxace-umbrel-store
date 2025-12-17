@@ -1,0 +1,28 @@
+manifestVersion: 1
+id: foxace-radarr
+name: Radarr (Nightly)
+tagline: Gestionnaire automatise de films
+icon: https://raw.githubusercontent.com/hotio/hotio.dev/master/docs/images/radarr/icon.png
+category: media
+version: "nightly"
+port: 7878
+description: >-
+  Radarr est un gestionnaire de collections de films qui surveille automatiquement plusieurs flux RSS pour trouver de nouveaux films. Il interface avec les clients Usenet et BitTorrent pour telecharger, trier et renommer automatiquement vos films.
+
+
+  Cette version utilise l'image hotio avec le tag nightly pour beneficier des dernieres fonctionnalites et corrections. L'image hotio est legere, optimisee et suit les recommandations TRaSH Guides.
+
+
+  Fonctionnalites principales: surveillance automatique des films, integration avec les indexeurs via Prowlarr, gestion de la qualite, renommage automatique, listes de films automatiques.
+developer: Radarr Team
+website: https://radarr.video
+submitter: foXaCe
+submission: https://github.com/foXaCe/foxace-umbrel-store
+repo: https://github.com/Radarr/Radarr
+support: https://github.com/Radarr/Radarr/issues
+releaseNotes: >-
+  Version nightly - Dernieres fonctionnalites et corrections en avant-premiere.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
