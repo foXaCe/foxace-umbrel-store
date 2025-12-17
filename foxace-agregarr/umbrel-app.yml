@@ -1,0 +1,31 @@
+manifestVersion: 1
+id: foxace-agregarr
+name: Agregarr
+tagline: Gestionnaire de collections Plex automatise
+icon: https://raw.githubusercontent.com/agregarr/agregarr/main/frontend/public/img/logo.png
+category: media
+version: "latest"
+port: 7171
+description: >-
+  Agregarr garde vos sections Accueil et Recommandations Plex toujours fraiches en les mettant a jour frequemment avec des collections de diverses sources.
+
+
+  Sources supportees: Trakt, IMDb, TMDB, Letterboxd, MDBList, FlixPatrol (Top 10 des plateformes), AniList et MyAnimeList. Vos collections Plex restent toujours a jour avec les tendances actuelles.
+
+
+  Agregarr peut aussi creer des affiches personnalisees avec des dates de sortie pour la fonctionnalite "Bientot disponible". Ideal pour garder votre serveur Plex dynamique et interessant.
+
+
+  Fonctionnalites: collections automatiques, sources multiples (Trakt, IMDB, TMDB...), affiches personnalisees, Coming Soon, interface web intuitive.
+developer: Agregarr Team
+website: https://github.com/agregarr/agregarr
+submitter: foXaCe
+submission: https://github.com/foXaCe/foxace-umbrel-store
+repo: https://github.com/agregarr/agregarr
+support: https://github.com/agregarr/agregarr/issues
+releaseNotes: >-
+  Collections Plex automatiques depuis Trakt, IMDB, TMDB, Letterboxd et plus.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""

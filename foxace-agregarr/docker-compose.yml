@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: foxace-agregarr_server_1
+      APP_PORT: 7171
+  server:
+    image: agregarr/agregarr:latest
+    environment:
+      - TZ=Europe/Paris
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/app/config
+      - ${UMBREL_ROOT}/data/storage/movies:/data/movies
+      - ${UMBREL_ROOT}/data/storage/tv:/data/tv
+    restart: on-failure
