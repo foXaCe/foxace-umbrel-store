@@ -2,7 +2,7 @@ manifestVersion: 1
 id: foxace-configarr
 name: Configarr
 tagline: Synchronisation TRaSH Guides pour Sonarr et Radarr
-icon: https://raw.githubusercontent.com/raydak-labs/configarr/main/docs/static/img/configarr.png
+icon: https://raw.githubusercontent.com/raydak-labs/configarr/main/docs/static/img/logo.svg
 category: media
 version: "latest"
 port: 8989
@@ -23,6 +23,8 @@ submitter: foXaCe
 submission: https://github.com/foXaCe/foxace-umbrel-store
 repo: https://github.com/raydak-labs/configarr
 support: https://github.com/raydak-labs/configarr/issues
+gallery:
+  - https://raw.githubusercontent.com/raydak-labs/configarr/main/docs/static/img/logo.webp
 releaseNotes: >-
   Synchronisation automatique des configurations TRaSH Guides avec Sonarr et Radarr.
 dependencies: []

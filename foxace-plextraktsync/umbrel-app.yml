@@ -2,7 +2,7 @@ manifestVersion: 1
 id: foxace-plextraktsync
 name: PlexTraktSync
 tagline: Synchronisation bidirectionnelle Plex et Trakt.tv
-icon: https://raw.githubusercontent.com/linuxserver-labs/docker-plextraktsync/main/images/plextraktsync-logo.png
+icon: https://raw.githubusercontent.com/Taxel/PlexTraktSync/main/plextraktsync/web/static/images/favicon-96x96.png
 category: media
 version: "latest"
 port: 8282
