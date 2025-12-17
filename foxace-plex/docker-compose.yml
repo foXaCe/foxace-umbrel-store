@@ -13,6 +13,7 @@ services:
       - PGID=1000
       - UMASK=002
       - TZ=Europe/Paris
+      - PLEX_ADVERTISE_URL=http://192.168.1.60:32400
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
       - ${APP_DATA_DIR}/data/transcode:/transcode
