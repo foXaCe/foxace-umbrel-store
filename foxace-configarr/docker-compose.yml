@@ -1,14 +1,30 @@
+version: "3.7"
 services:
   app_proxy:
     environment:
       APP_HOST: foxace-configarr_server_1
       APP_PORT: 8191
       PROXY_AUTH_WHITELIST: "/healthcheck"
+    networks:
+      default:
   server:
     image: ghcr.io/raydak-labs/configarr:latest
     environment:
       - TZ=Europe/Paris
+      - PUID=1000
+      - PGID=1000
     volumes:
-      - ${APP_DATA_DIR}/data:/app/config
-    entrypoint: ["tail", "-f", "/dev/null"]
+      - ${APP_DATA_DIR}/data/config.yml:/app/config.yml:ro
+      - ${APP_DATA_DIR}/data/secrets.yml:/app/secrets.yml:ro
+      - ${APP_DATA_DIR}/data/repos:/app/repos
+      - ${APP_DATA_DIR}/data/cache:/app/cache
     restart: on-failure
+    networks:
+      default:
+        aliases:
+          - configarr
+
+networks:
+  default:
+    name: umbrel_main_network
+    external: true
