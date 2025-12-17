@@ -9,52 +9,7 @@ services:
     image: ghcr.io/raydak-labs/configarr:latest
     environment:
       - TZ=Europe/Paris
-      - PUID=1000
-      - PGID=1000
     volumes:
       - ${APP_DATA_DIR}/data:/app/config
-    entrypoint: ["/bin/sh", "-c"]
-    command:
-      - |
-        # Create template config if not exists
-        if [ ! -f /app/config/config.yml ]; then
-          cat > /app/config/config.yml << 'EOFCONFIG'
-        # Configarr Configuration
-        # Documentation: https://configarr.de
-
-        trashGuideUrl: https://github.com/TRaSH-Guides/Guides
-        recyclarrConfigUrl: https://github.com/recyclarr/config-templates
-
-        sonarr:
-          series:
-            base_url: http://foxace-sonarr_server_1:8989
-            api_key: !secret SONARR_API_KEY
-            quality_definition:
-              type: series
-
-        radarr:
-          movies:
-            base_url: http://foxace-radarr_server_1:7878
-            api_key: !secret RADARR_API_KEY
-            quality_definition:
-              type: movie
-        EOFCONFIG
-          echo "config.yml created - please edit with your settings"
-        fi
-
-        if [ ! -f /app/config/secrets.yml ]; then
-          cat > /app/config/secrets.yml << 'EOFSECRETS'
-        # Secrets for Configarr
-        SONARR_API_KEY: YOUR_SONARR_API_KEY_HERE
-        RADARR_API_KEY: YOUR_RADARR_API_KEY_HERE
-        EOFSECRETS
-          echo "secrets.yml created - please edit with your API keys"
-        fi
-
-        echo "Configarr ready. Run 'configarr' to sync configurations."
-        echo "Edit config at: /app/config/config.yml"
-        echo "Edit secrets at: /app/config/secrets.yml"
-
-        # Keep container alive
-        tail -f /dev/null
+    command: ["sleep", "infinity"]
     restart: on-failure
