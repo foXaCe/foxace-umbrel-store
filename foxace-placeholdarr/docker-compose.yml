@@ -4,6 +4,8 @@ services:
     environment:
       APP_HOST: foxace-placeholdarr_server_1
       APP_PORT: 8000
+    networks:
+      default:
   server:
     image: ghcr.io/theindiearmy/placeholdarr:queue_monitoring-latest
     environment:
@@ -13,13 +15,13 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/config:/app/data
       - ${APP_DATA_DIR}/data/env:/app/envdir
-      - ${UMBREL_ROOT}/data/storage:/data
+      - ${UMBREL_ROOT}/home:/mnt:rslave
     entrypoint:
       - /bin/sh
       - -c
       - |
         # Create required directories
-        mkdir -p /data/media/movies /data/media/tv /app/envdir
+        mkdir -p /app/envdir
 
         # Create dummy placeholder file if it doesn't exist
         if [ ! -f /app/data/placeholder.mp4 ]; then
@@ -44,20 +46,20 @@ services:
         ENABLE_EMBY=false
 
         # === PLEX SETTINGS ===
-        PLEX_URL=http://plex_plex_1:32400
+        PLEX_URL=http://plex:32400
         PLEX_TOKEN=your_plex_token_here
 
         # === RADARR SETTINGS ===
-        RADARR_URL=http://foxace-radarr_server_1:7878
+        RADARR_URL=http://radarr:7878
         RADARR_API_KEY=your_radarr_api_key_here
 
         # === SONARR SETTINGS ===
-        SONARR_URL=http://foxace-sonarr_server_1:8989
+        SONARR_URL=http://sonarr:8989
         SONARR_API_KEY=your_sonarr_api_key_here
 
         # === LIBRARY FOLDERS ===
-        MOVIE_LIBRARY_FOLDER=/data/media/movies
-        TV_LIBRARY_FOLDER=/data/media/tv
+        MOVIE_LIBRARY_FOLDER=/mnt/Videos/radarr
+        TV_LIBRARY_FOLDER=/mnt/Videos/sonarr
 
         # === PLACEHOLDER FILE ===
         DUMMY_FILE_PATH=/app/data/placeholder.mp4
@@ -77,3 +79,12 @@ services:
         fi
         exec uvicorn main:app --host 0.0.0.0 --port 8000
     restart: on-failure
+    networks:
+      default:
+        aliases:
+          - placeholdarr
+
+networks:
+  default:
+    name: umbrel_main_network
+    external: true
