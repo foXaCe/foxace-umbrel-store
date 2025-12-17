@@ -16,3 +16,12 @@ services:
       - ${UMBREL_ROOT}/data/storage:/data
       - ${UMBREL_ROOT}/data/storage:/mnt:rshared
     restart: on-failure
+    networks:
+      default:
+        aliases:
+          - radarr
+
+networks:
+  default:
+    name: umbrel_main_network
+    external: true

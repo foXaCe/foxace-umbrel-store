@@ -16,3 +16,12 @@ services:
     security_opt:
       - apparmor:unconfined
     restart: on-failure
+    networks:
+      default:
+        aliases:
+          - decypharr
+
+networks:
+  default:
+    name: umbrel_main_network
+    external: true
