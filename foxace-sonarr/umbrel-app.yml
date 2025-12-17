@@ -1,6 +1,6 @@
 manifestVersion: 1
 id: foxace-sonarr
-name: Sonarr (Nightly)
+name: Sonarr
 tagline: PVR intelligent pour les series TV
 icon: https://getumbrel.github.io/umbrel-apps-gallery/sonarr/icon.svg
 category: media

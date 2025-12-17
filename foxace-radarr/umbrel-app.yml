@@ -1,6 +1,6 @@
 manifestVersion: 1
 id: foxace-radarr
-name: Radarr (Nightly)
+name: Radarr
 tagline: Gestionnaire de collection de films
 icon: https://getumbrel.github.io/umbrel-apps-gallery/radarr/icon.svg
 category: media

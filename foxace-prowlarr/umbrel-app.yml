@@ -1,6 +1,6 @@
 manifestVersion: 1
 id: foxace-prowlarr
-name: Prowlarr (Nightly)
+name: Prowlarr
 tagline: Gestionnaire d'indexeurs pour Sonarr, Radarr et plus
 icon: https://getumbrel.github.io/umbrel-apps-gallery/prowlarr/icon.svg
 category: media
