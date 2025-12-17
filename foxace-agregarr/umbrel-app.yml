@@ -2,7 +2,7 @@ manifestVersion: 1
 id: foxace-agregarr
 name: Agregarr
 tagline: Gestionnaire de collections Plex automatise
-icon: https://raw.githubusercontent.com/agregarr/agregarr/main/public/logo_full.svg
+icon: https://raw.githubusercontent.com/agregarr/agregarr/latest/public/logo_full.png
 category: media
 version: "latest"
 port: 7171
@@ -24,8 +24,8 @@ submission: https://github.com/foXaCe/foxace-umbrel-store
 repo: https://github.com/agregarr/agregarr
 support: https://github.com/agregarr/agregarr/issues
 gallery:
-  - https://raw.githubusercontent.com/agregarr/agregarr/main/public/logo_full.png
-  - https://raw.githubusercontent.com/agregarr/agregarr/main/public/logo_stacked.svg
+  - https://raw.githubusercontent.com/agregarr/agregarr/latest/public/logo_full.png
+  - https://raw.githubusercontent.com/agregarr/agregarr/latest/public/android-chrome-512x512.png
 releaseNotes: >-
   Collections Plex automatiques depuis Trakt, IMDB, TMDB, Letterboxd et plus.
 dependencies: []
