@@ -8,7 +8,6 @@ services:
       default:
   web:
     image: ghcr.io/sirrobot01/decypharr:latest
-    user: "1000:1000"
     volumes:
       - ${APP_DATA_DIR}/data/configs:/app
       - ${UMBREL_ROOT}/home:/mnt:rshared

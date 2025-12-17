@@ -4,7 +4,7 @@ name: Decypharr
 tagline: Solution avancee pour les telechargements Debrid automatises
 icon: https://raw.githubusercontent.com/dennysubke/dennys-umbrel-app-gallery/main/denny-decypharr/logo.png
 category: media
-version: "1.1.9"
+version: "1.2.0"
 port: 8282
 description: >-
   Decypharr est une application open source ecrite en Go qui agit comme une API compatible qBittorrent tout en integrant les services Debrid populaires tels que Real Debrid, All Debrid, Torbox et Debrid Link. Elle est concue pour une integration transparente avec les outils d'automatisation comme Sonarr, Radarr et Lidarr qui peuvent interagir avec elle comme s'il s'agissait d'un client qBittorrent standard. Cela permet aux utilisateurs d'automatiser le telechargement de torrents via leurs comptes Debrid premium sans avoir besoin d'un client torrent traditionnel ou d'une seedbox.
@@ -30,7 +30,7 @@ gallery:
   - https://raw.githubusercontent.com/dennysubke/dennys-umbrel-app-gallery/main/denny-decypharr/4.jpg
   - https://raw.githubusercontent.com/dennysubke/dennys-umbrel-app-gallery/main/denny-decypharr/5.jpg
 releaseNotes: >-
-  v1.1.9: Utilisation de l'image officielle Decypharr (ghcr.io/sirrobot01/decypharr) au lieu de cy01/blackhole.
+  v1.2.0: Suppression de user 1000:1000 pour permettre les montages FUSE.
 dependencies: []
 path: ""
 defaultUsername: ""
