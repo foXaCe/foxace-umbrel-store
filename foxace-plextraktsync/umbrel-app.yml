@@ -1,0 +1,31 @@
+manifestVersion: 1
+id: foxace-plextraktsync
+name: PlexTraktSync
+tagline: Synchronisation bidirectionnelle Plex et Trakt.tv
+icon: https://raw.githubusercontent.com/linuxserver-labs/docker-plextraktsync/main/images/plextraktsync-logo.png
+category: media
+version: "latest"
+port: 8282
+description: >-
+  PlexTraktSync permet une synchronisation bidirectionnelle entre Trakt.tv et Plex Media Server sans abonnement premium. Gardez vos historiques de visionnage, notes et collections synchronises entre les deux plateformes.
+
+
+  IMPORTANT: Cette application fonctionne en arriere-plan sans interface web. La synchronisation se fait automatiquement toutes les 2 heures via cron. Pour la configuration initiale, utilisez Portainer pour acceder a la console du conteneur.
+
+
+  Fonctionnalites: synchronisation des collections Plex vers Trakt, sync des notes et du statut "vu", telechargement des listes Trakt vers Plex, synchronisation de la watchlist, configuration flexible.
+
+
+  Configuration initiale: Apres l'installation, editez le fichier config.yml dans le dossier de l'app ou lancez la commande plextraktsync via la console Portainer pour configurer vos identifiants Plex et Trakt.
+developer: Taxel
+website: https://github.com/Taxel/PlexTraktSync
+submitter: foXaCe
+submission: https://github.com/foXaCe/foxace-umbrel-store
+repo: https://github.com/Taxel/PlexTraktSync
+support: https://github.com/Taxel/PlexTraktSync/issues
+releaseNotes: >-
+  Synchronisation automatique Plex-Trakt toutes les 2 heures. Service background sans interface web.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
