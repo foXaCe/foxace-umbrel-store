@@ -2,7 +2,7 @@ manifestVersion: 1
 id: foxace-placeholdarr
 name: Placeholdarr
 tagline: Placeholders pour contenus non telecharges dans Plex/Jellyfin
-icon: https://avatars.githubusercontent.com/u/66705353?v=4
+icon: https://upandclear.org/wp-content/uploads/2025/10/chatgpt-image-25-oct.-2025-06_27_47-768x768.jpg
 category: media
 version: "latest"
 port: 8000
