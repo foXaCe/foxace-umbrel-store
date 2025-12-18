@@ -1,0 +1,30 @@
+manifestVersion: 1
+id: foxace-aura
+name: AURA
+tagline: Gestionnaire d'assets visuels pour Plex/Jellyfin/Emby
+icon: https://raw.githubusercontent.com/mediux-team/AURA/main/frontend/public/aura_logo.png
+category: media
+version: "1.0.0"
+port: 3000
+description: >-
+  AURA (Automated Utility for Retrieval of Assets) est un outil visuel pour gerer les assets d'image MediUX sur votre serveur media.
+
+
+  Interface intuitive pour parcourir, previsualiser et appliquer des ensembles d'images (posters, backgrounds, logos) a votre contenu multimedia.
+
+
+  Fonctionnalites: compatibilite multi-serveurs (Plex, Emby, Jellyfin), navigation visuelle des affiches, mises a jour automatisees, stockage local des images.
+developer: mediux-team
+website: https://github.com/mediux-team/AURA
+submitter: foXaCe
+submission: https://github.com/foXaCe/foxace-umbrel-store
+repo: https://github.com/mediux-team/AURA
+support: https://github.com/mediux-team/AURA/issues
+gallery:
+  - https://raw.githubusercontent.com/mediux-team/AURA/main/frontend/public/aura_logo.png
+releaseNotes: >-
+  v1.0.0: Version initiale avec interface web.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
