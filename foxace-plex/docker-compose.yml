@@ -12,6 +12,8 @@ services:
       - UMASK=000
       - TZ=Europe/Paris
       - PLEX_MEDIA_SERVER_APPLICATION_SUPPORT_DIR=/config
+      - PLEX_ALLOWED_NETWORKS=192.168.1.0/24
+      - ADVERTISE_IP=http://192.168.1.60:32400/
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
       - ${APP_DATA_DIR}/data/transcode:/transcode
