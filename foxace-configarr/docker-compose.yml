@@ -27,7 +27,7 @@ services:
         mkdir -p /app/logs
         while true; do
           echo "[$(date)] Lancement de Configarr..." | tee -a /app/logs/configarr.log
-          node /app/bundle.js 2>&1 | tee -a /app/logs/configarr.log
+          node /app/index.js 2>&1 | tee -a /app/logs/configarr.log
           echo "[$(date)] Termine. Prochaine execution dans 7 jours." | tee -a /app/logs/configarr.log
           sleep 604800
         done

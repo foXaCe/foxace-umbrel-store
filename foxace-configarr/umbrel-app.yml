@@ -4,7 +4,7 @@ name: Configarr
 tagline: Synchronisation TRaSH Guides pour Sonarr et Radarr
 icon: https://raw.githubusercontent.com/raydak-labs/configarr/main/docs/static/img/logo.svg
 category: media
-version: "1.0.3"
+version: "1.0.4"
 port: 8191
 description: >-
   Configarr simplifie la configuration et la synchronisation de Sonarr et Radarr avec les TRaSH Guides. Il gere automatiquement les formats personnalises, les profils de qualite et autres parametres.
@@ -26,7 +26,7 @@ support: https://github.com/raydak-labs/configarr/issues
 gallery:
   - https://raw.githubusercontent.com/raydak-labs/configarr/main/docs/static/img/logo.webp
 releaseNotes: >-
-  v1.0.3: Fix chemin config - /app/config/config.yml
+  v1.0.4: Fix entrypoint - index.js au lieu de bundle.js
 dependencies: []
 path: ""
 defaultUsername: ""
