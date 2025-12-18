@@ -1,13 +1,11 @@
 version: "3.7"
+
 services:
-  app_proxy:
-    environment:
-      APP_HOST: foxace-plex_server_1
-      APP_PORT: 32400
-    networks:
-      default:
   server:
     image: binhex/arch-plexpass:latest
+    restart: on-failure
+    hostname: "${DEVICE_HOSTNAME}"
+    network_mode: host
     environment:
       - PUID=1000
       - PGID=1000
@@ -20,13 +18,3 @@ services:
       - ${UMBREL_ROOT}/home:/mnt:rslave
     devices:
       - /dev/dri:/dev/dri
-    restart: on-failure
-    networks:
-      default:
-        aliases:
-          - plex
-
-networks:
-  default:
-    name: umbrel_main_network
-    external: true
