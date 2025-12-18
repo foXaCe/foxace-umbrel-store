@@ -1,31 +1,31 @@
 manifestVersion: 1
 id: foxace-plex
-name: Plex (Hotio)
-tagline: Serveur multimedia personnel
+name: Plex
+tagline: Serveur multimedia personnel (version beta)
 icon: https://getumbrel.github.io/umbrel-apps-gallery/plex/icon.svg
 category: media
-version: "1.0.8"
+version: "1.0.0"
 port: 32400
 description: >-
-  Plex organise vos collections de videos, musiques et photos et les diffuse sur tous vos appareils. Cette version utilise l'image hotio pour une meilleure integration avec l'ecosysteme *arr.
+  Plex organise vos collections de videos, musiques et photos et les diffuse sur tous vos appareils. Cette version utilise l'image binhex pour acceder aux versions beta de Plex Pass.
 
 
   Le volume /mnt est deja configure pour acceder a vos medias depuis Radarr et Sonarr. Vos bibliotheques seront accessibles dans /mnt/media/movies et /mnt/media/tv.
 
 
-  Fonctionnalites: streaming local et distant, transcodage materiel, synchronisation hors ligne, partage avec famille et amis.
+  Fonctionnalites: streaming local et distant, transcodage materiel, synchronisation hors ligne, partage avec famille et amis, acces aux versions beta en avant-premiere.
 developer: Plex Inc.
 website: https://plex.tv
 submitter: foXaCe
 submission: https://github.com/foXaCe/foxace-umbrel-store
-repo: https://github.com/plexinc/pms-docker
+repo: https://github.com/binhex/arch-plexpass
 support: https://forums.plex.tv
 gallery:
   - https://getumbrel.github.io/umbrel-apps-gallery/plex/1.jpg
   - https://getumbrel.github.io/umbrel-apps-gallery/plex/2.jpg
   - https://getumbrel.github.io/umbrel-apps-gallery/plex/3.jpg
 releaseNotes: >-
-  v1.0.8: Fix conflit port - proxy gere le port 32400.
+  v1.0.0: Version initiale avec image binhex pour Plex Pass beta.
 dependencies: []
 path: "/web"
 defaultUsername: ""
