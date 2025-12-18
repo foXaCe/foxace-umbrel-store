@@ -14,8 +14,7 @@ services:
       - PUID=1000
       - PGID=1000
     volumes:
-      - ${APP_DATA_DIR}/data/config.yml:/app/config.yml:ro
-      - ${APP_DATA_DIR}/data/secrets.yml:/app/secrets.yml:ro
+      - ${APP_DATA_DIR}/data/config:/app/config
       - ${APP_DATA_DIR}/data/repos:/app/repos
       - ${APP_DATA_DIR}/data/cache:/app/cache
       - ${APP_DATA_DIR}/data/logs:/app/logs
