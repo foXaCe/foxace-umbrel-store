@@ -8,6 +8,7 @@ services:
       default:
   server:
     image: ghcr.io/theindiearmy/placeholdarr:queue_monitoring-latest
+    user: "1000:1000"
     environment:
       - PLACEHOLDARR_HOST=0.0.0.0
       - PLACEHOLDARR_PORT=8000
