@@ -4,7 +4,7 @@ name: Radarr
 tagline: Gestionnaire de collection de films
 icon: https://getumbrel.github.io/umbrel-apps-gallery/radarr/icon.svg
 category: media
-version: "1.0.5"
+version: "1.0.6"
 port: 7878
 description: >-
   Radarr est un gestionnaire de collection de films pour les utilisateurs Usenet et BitTorrent. Il surveille plusieurs flux RSS pour trouver de nouveaux films et les telecharge, trie et renomme automatiquement.
@@ -28,7 +28,7 @@ gallery:
   - https://getumbrel.github.io/umbrel-apps-gallery/radarr/2.jpg
   - https://getumbrel.github.io/umbrel-apps-gallery/radarr/3.jpg
 releaseNotes: >-
-  v1.0.5: Renommage de l'app (retrait de Nightly du nom).
+  v1.0.6: API whitelist pour apps externes (NZB360, etc).
 dependencies: []
 path: ""
 defaultUsername: ""
