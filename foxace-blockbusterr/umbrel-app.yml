@@ -1,0 +1,30 @@
+manifestVersion: 1
+id: foxace-blockbusterr
+name: Blockbusterr
+tagline: Auto-import trending/popular depuis Trakt vers Radarr/Sonarr
+icon: https://walter.trakt.tv/hotlink-ok/public/favicon.svg
+category: media
+version: "1.0.0"
+port: 9090
+description: >-
+  Blockbusterr ajoute automatiquement les films et series trending, populaires et bien notes depuis Trakt.tv vers Radarr et Sonarr.
+
+
+  15 jobs automatises pour synchroniser differentes listes Trakt: trending, popular, anticipated, box office, et plus. Configuration via interface web sans edition de fichiers.
+
+
+  Supporte aussi Jellyseerr/Overseerr pour un workflow d'approbation avant ajout. Ideal pour remplir automatiquement votre bibliotheque avec du contenu de qualite.
+developer: Mahcks
+website: https://github.com/Mahcks/blockbusterr
+submitter: foXaCe
+submission: https://github.com/foXaCe/foxace-umbrel-store
+repo: https://github.com/Mahcks/blockbusterr
+support: https://github.com/Mahcks/blockbusterr/issues
+gallery:
+  - https://walter.trakt.tv/hotlink-ok/public/favicon.svg
+releaseNotes: >-
+  v1.0.0: Version initiale avec interface web.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""

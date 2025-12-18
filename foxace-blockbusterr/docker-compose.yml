@@ -1,0 +1,25 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: foxace-blockbusterr_server_1
+      APP_PORT: 9090
+    networks:
+      default:
+  server:
+    image: ghcr.io/mahcks/blockbusterr:latest
+    environment:
+      - TZ=Europe/Paris
+      - REST_PORT=9090
+    volumes:
+      - ${APP_DATA_DIR}/data:/app/data
+    restart: on-failure
+    networks:
+      default:
+        aliases:
+          - blockbusterr
+
+networks:
+  default:
+    name: umbrel_main_network
+    external: true
