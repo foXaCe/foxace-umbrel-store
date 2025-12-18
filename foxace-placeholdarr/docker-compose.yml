@@ -7,7 +7,7 @@ services:
     networks:
       default:
   server:
-    image: ghcr.io/theindiearmy/placeholdarr:global_workflow-latest
+    image: ghcr.io/theindiearmy/placeholdarr:queue_monitoring-latest
     environment:
       - PLACEHOLDARR_HOST=0.0.0.0
       - PLACEHOLDARR_PORT=8000
