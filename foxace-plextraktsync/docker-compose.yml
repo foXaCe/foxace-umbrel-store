@@ -1,16 +1,42 @@
 version: "3.7"
 services:
-  app_proxy:
-    environment:
-      APP_HOST: foxace-plextraktsync_server_1
-      APP_PORT: 8282
-      PROXY_AUTH_WHITELIST: "/healthcheck"
   server:
-    image: lscr.io/linuxserver-labs/plextraktsync:latest
+    image: ghcr.io/taxel/plextraktsync:latest
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Paris
     volumes:
-      - ${APP_DATA_DIR}/data/config:/config
+      - ${APP_DATA_DIR}/data/config:/app/config
+    entrypoint:
+      - /bin/sh
+      - -c
+      - |
+        echo "=== PlexTraktSync ==="
+        echo "Synchronisation toutes les 2 heures"
+
+        # Verifier si la config existe
+        if [ ! -f /app/config/.env ]; then
+          echo "Configuration manquante!"
+          echo "Lancez: docker exec -it foxace-plextraktsync_server_1 plextraktsync"
+          echo "En attente de configuration..."
+          sleep infinity
+        fi
+
+        # Boucle de sync
+        while true; do
+          echo "[$(date)] Lancement sync..."
+          plextraktsync sync 2>&1 || true
+          echo "[$(date)] Prochaine sync dans 2 heures"
+          sleep 7200
+        done
     restart: on-failure
+    networks:
+      default:
+        aliases:
+          - plextraktsync
+
+networks:
+  default:
+    name: umbrel_main_network
+    external: true
