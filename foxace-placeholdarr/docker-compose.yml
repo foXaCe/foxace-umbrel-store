@@ -88,6 +88,8 @@ services:
         # === LIBRARY FOLDERS ===
         MOVIE_LIBRARY_FOLDER=/mnt/Videos/radarr
         TV_LIBRARY_FOLDER=/mnt/Videos/sonarr
+        DUMMY_MOVIE_LIBRARY_FOLDER=/mnt/Videos/radarr
+        DUMMY_TV_LIBRARY_FOLDER=/mnt/Videos/sonarr
         # 4K optionnel
         MOVIE_LIBRARY_4K_FOLDER=
         TV_LIBRARY_4K_FOLDER=
