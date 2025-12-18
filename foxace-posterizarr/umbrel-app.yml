@@ -4,8 +4,8 @@ name: Posterizarr
 tagline: Generation automatique de posters pour Plex/Jellyfin
 icon: https://raw.githubusercontent.com/fscorrupt/posterizarr/main/webui/frontend/public/favicon.png
 category: media
-version: "1.0.0"
-port: 8000
+version: "1.0.1"
+port: 8001
 description: >-
   Posterizarr genere automatiquement des posters pour votre mediatheque. Il recupere les artworks depuis Fanart.tv, TMDB, TVDB, Plex et IMDb, avec preference pour les images sans texte.
 
