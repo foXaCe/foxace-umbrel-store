@@ -1,0 +1,30 @@
+manifestVersion: 1
+id: foxace-pulsarr
+name: Pulsarr
+tagline: Surveillance watchlist Plex avec routage Sonarr/Radarr
+icon: https://raw.githubusercontent.com/jamcalli/Pulsarr/main/apps/pulsarr/src/client/assets/logo.png
+category: media
+version: "1.0.0"
+port: 3003
+description: >-
+  Pulsarr surveille en temps reel les watchlists Plex et route automatiquement le contenu vers Sonarr et Radarr. Il permet un workflow d'approbation intelligent et supporte plusieurs utilisateurs sans connexions separees.
+
+
+  Fonctionnalites: surveillance watchlist Plex en temps reel, routage intelligent vers Sonarr/Radarr, workflows d'approbation, support multi-utilisateurs, notifications, interface web moderne.
+
+
+  Configuration: Apres installation, accedez a l'interface web pour configurer vos connexions Plex, Sonarr et Radarr.
+developer: jamcalli
+website: https://github.com/jamcalli/Pulsarr
+submitter: foXaCe
+submission: https://github.com/foXaCe/foxace-umbrel-store
+repo: https://github.com/jamcalli/Pulsarr
+support: https://github.com/jamcalli/Pulsarr/issues
+gallery:
+  - https://raw.githubusercontent.com/jamcalli/Pulsarr/main/apps/pulsarr/src/client/assets/logo.png
+releaseNotes: >-
+  v1.0.0: Version initiale avec interface web.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
