@@ -39,55 +39,93 @@ services:
             ln -sf /app/envdir/.env /app/.env
           else
             cat > /app/envdir/.env << 'ENVEOF'
-        # Placeholdarr Configuration
+        # Placeholdarr Configuration (jellyfin_release)
         # Documentation: https://github.com/TheIndieArmy/Placeholdarr
-        # Editez ce fichier via SSH: ~/umbrel/app-data/foxace-placeholdarr/data/env/.env
+        # Editez ce fichier: ~/umbrel/app-data/foxace-placeholdarr/data/env/.env
 
-        # === MEDIA SERVER TOGGLES ===
+        # === SERVER ===
+        PLACEHOLDARR_HOST=0.0.0.0
+        PLACEHOLDARR_PORT=8000
+        PLACEHOLDARR_LOG_LEVEL=INFO
+
+        # === MEDIA SERVERS ===
         ENABLE_PLEX=true
         ENABLE_JELLYFIN=false
-        ENABLE_EMBY=false
 
-        # === PLEX SETTINGS ===
+        # === PLEX (si ENABLE_PLEX=true) ===
         # Plex est en network_mode:host, utiliser IP locale
         PLEX_URL=http://192.168.1.60:32400
         PLEX_TOKEN=your_plex_token_here
+        PLEX_MOVIE_SECTION_ID=1
+        PLEX_TV_SECTION_ID=2
 
-        # === RADARR SETTINGS ===
-        RADARR_URL=http://radarr:7878
+        # === JELLYFIN (si ENABLE_JELLYFIN=true) ===
+        JELLYFIN_URL=http://jellyfin:8096
+        JELLYFIN_TOKEN=your_jellyfin_token_here
+
+        # === RADARR ===
+        RADARR_URL=http://radarr:7878/api/v3
         RADARR_API_KEY=your_radarr_api_key_here
+        RADARR_SYNC_ON_STARTUP=true
+        RADARR_SYNC_CRON=
+        # 4K optionnel (laisser vide si pas utilise)
+        RADARR_4K_URL=
+        RADARR_4K_API_KEY=
+        RADARR_4K_SYNC_ON_STARTUP=true
+        RADARR_4K_SYNC_CRON=
 
-        # === SONARR SETTINGS ===
-        SONARR_URL=http://sonarr:8989
+        # === SONARR ===
+        SONARR_URL=http://sonarr:8989/api/v3
         SONARR_API_KEY=your_sonarr_api_key_here
+        SONARR_SYNC_ON_STARTUP=true
+        SONARR_SYNC_CRON=
+        # 4K optionnel (laisser vide si pas utilise)
+        SONARR_4K_URL=
+        SONARR_4K_API_KEY=
+        SONARR_4K_SYNC_ON_STARTUP=true
+        SONARR_4K_SYNC_CRON=
 
         # === LIBRARY FOLDERS ===
         MOVIE_LIBRARY_FOLDER=/mnt/Videos/radarr
         TV_LIBRARY_FOLDER=/mnt/Videos/sonarr
+        # 4K optionnel
+        MOVIE_LIBRARY_4K_FOLDER=
+        TV_LIBRARY_4K_FOLDER=
 
         # === PLACEHOLDER FILES ===
         DUMMY_FILE_PATH=/app/data/placeholder.mp4
         COMING_SOON_DUMMY_FILE_PATH=/app/data/coming_soon.mp4
-
-        # === PLACEHOLDER STRATEGY ===
         PLACEHOLDER_STRATEGY=hardlink
+
+        # === QUEUE MANAGEMENT ===
         TV_PLAY_MODE=episode
+        EPISODES_LOOKAHEAD=5
+        MAX_MONITOR_TIME=120
+        CHECK_INTERVAL=3
         TITLE_UPDATES=REQUEST
+        AVAILABLE_CLEANUP_DELAY=10
 
         # === CALENDAR / COMING SOON ===
-        ENABLE_COMING_SOON_PLACEHOLDERS=true
         CALENDAR_LOOKAHEAD_DAYS=30
-        CALENDAR_SYNC_INTERVAL_HOURS=6
+        CALENDAR_SYNC_INTERVAL_HOURS=12
+        ENABLE_COMING_SOON_PLACEHOLDERS=true
+        PREFERRED_MOVIE_DATE_TYPE=inCinemas
+        ENABLE_COMING_SOON_COUNTDOWN=true
+        CALENDAR_PLACEHOLDER_MODE=episode
 
-        # === QUEUE TRACKING ===
-        ENABLE_QUEUE_TRACKING=true
-        QUEUE_CHECK_INTERVAL=60
-
-        # === OTHER SETTINGS ===
+        # === OTHER ===
         INCLUDE_SPECIALS=false
-        EPISODES_LOOKAHEAD=3
-        MAX_MONITOR_TIME=86400
-        CHECK_INTERVAL=60
+        RESET_SUBFLOWS_ON_STARTUP=QUEUED,FAILED
+        PLACEHOLDARR_SKIP_WEBHOOK_CHECK=false
+        PLACEHOLDARR_WEBHOOK_URL=
+
+        # === DATABASE (optionnel - PostgreSQL) ===
+        # Laisser vide pour utiliser SQLite
+        DB_HOST=
+        DB_PORT=5432
+        DB_USER=
+        DB_PASS=
+        DB_NAME=
         ENVEOF
             ln -sf /app/envdir/.env /app/.env
             echo "Created default .env - configure it in ~/umbrel/app-data/foxace-placeholdarr/data/env/.env"
