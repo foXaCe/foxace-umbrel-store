@@ -8,7 +8,6 @@ services:
       default:
   server:
     image: ghcr.io/theindiearmy/placeholdarr:queue_monitoring-latest
-    user: "1000:1000"
     environment:
       - PLACEHOLDARR_HOST=0.0.0.0
       - PLACEHOLDARR_PORT=8000
@@ -94,6 +93,11 @@ services:
             echo "Created default .env - configure it in ~/umbrel/app-data/foxace-placeholdarr/data/env/.env"
           fi
         fi
+
+        # Fix permissions - ensure created folders are owned by 1000:1000
+        chown -R 1000:1000 /mnt/Videos/radarr 2>/dev/null || true
+        chown -R 1000:1000 /mnt/Videos/sonarr 2>/dev/null || true
+
         exec uvicorn main:app --host 0.0.0.0 --port 8000
     restart: on-failure
     networks:
