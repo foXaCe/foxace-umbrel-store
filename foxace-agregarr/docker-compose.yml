@@ -4,12 +4,22 @@ services:
     environment:
       APP_HOST: foxace-agregarr_server_1
       APP_PORT: 7171
+    networks:
+      default:
   server:
     image: agregarr/agregarr:latest
     environment:
       - TZ=Europe/Paris
     volumes:
       - ${APP_DATA_DIR}/data/config:/app/config
-      - ${UMBREL_ROOT}/data/storage/movies:/data/movies
-      - ${UMBREL_ROOT}/data/storage/tv:/data/tv
+      - ${UMBREL_ROOT}/home:/mnt:rslave
     restart: on-failure
+    networks:
+      default:
+        aliases:
+          - agregarr
+
+networks:
+  default:
+    name: umbrel_main_network
+    external: true
