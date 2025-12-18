@@ -4,16 +4,16 @@ name: Configarr
 tagline: Synchronisation TRaSH Guides pour Sonarr et Radarr
 icon: https://raw.githubusercontent.com/raydak-labs/configarr/main/docs/static/img/logo.svg
 category: media
-version: "1.0.1"
+version: "1.0.2"
 port: 8191
 description: >-
   Configarr simplifie la configuration et la synchronisation de Sonarr et Radarr avec les TRaSH Guides. Il gere automatiquement les formats personnalises, les profils de qualite et autres parametres.
 
 
-  IMPORTANT: Cette application n'a pas d'interface web. C'est un outil en ligne de commande. Apres l'installation, editez les fichiers config.yml et secrets.yml dans le dossier de l'app via SSH ou Portainer, puis executez 'configarr' dans le conteneur.
+  IMPORTANT: Cette application n'a pas d'interface web. Elle s'execute automatiquement une fois par semaine pour synchroniser vos profils. Les logs sont disponibles dans ~/umbrel/app-data/foxace-configarr/data/logs/
 
 
-  Configuration: Les fichiers templates sont crees automatiquement au premier demarrage. Modifiez secrets.yml pour ajouter vos cles API Sonarr/Radarr, puis ajustez config.yml selon vos besoins. Executez ensuite: docker exec foxace-configarr_server_1 configarr
+  Configuration: Copiez vos fichiers config.yml et secrets.yml dans ~/umbrel/app-data/foxace-configarr/data/ puis redemarrez l'app. La synchronisation se lance au demarrage puis toutes les semaines.
 
 
   Fonctionnalites: synchronisation TRaSH Guides, formats personnalises, profils de qualite, support Radarr v5 et Sonarr v4, alternative a Recyclarr.
@@ -26,7 +26,7 @@ support: https://github.com/raydak-labs/configarr/issues
 gallery:
   - https://raw.githubusercontent.com/raydak-labs/configarr/main/docs/static/img/logo.webp
 releaseNotes: >-
-  v1.0.1: Fix docker-compose - reseau et volumes corriges.
+  v1.0.2: Execution automatique hebdomadaire avec logs.
 dependencies: []
 path: ""
 defaultUsername: ""

@@ -18,6 +18,20 @@ services:
       - ${APP_DATA_DIR}/data/secrets.yml:/app/secrets.yml:ro
       - ${APP_DATA_DIR}/data/repos:/app/repos
       - ${APP_DATA_DIR}/data/cache:/app/cache
+      - ${APP_DATA_DIR}/data/logs:/app/logs
+    entrypoint:
+      - /bin/sh
+      - -c
+      - |
+        echo "=== Configarr Scheduler ==="
+        echo "Execution toutes les semaines (dimanche 3h)"
+        mkdir -p /app/logs
+        while true; do
+          echo "[$(date)] Lancement de Configarr..." | tee -a /app/logs/configarr.log
+          node /app/bundle.js 2>&1 | tee -a /app/logs/configarr.log
+          echo "[$(date)] Termine. Prochaine execution dans 7 jours." | tee -a /app/logs/configarr.log
+          sleep 604800
+        done
     restart: on-failure
     networks:
       default:
