@@ -9,9 +9,8 @@ services:
   server:
     image: ghcr.io/fscorrupt/posterizarr:latest
     hostname: posterizarr
+    user: "0:0"
     environment:
-      - PUID=1000
-      - PGID=1000
       - TZ=Europe/Paris
       - TERM=xterm
       - RUN_TIME=disabled
