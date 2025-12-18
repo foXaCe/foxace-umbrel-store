@@ -49,7 +49,8 @@ services:
         ENABLE_EMBY=false
 
         # === PLEX SETTINGS ===
-        PLEX_URL=http://foxace-plex_server_1:32400
+        # Plex est en network_mode:host, utiliser IP locale
+        PLEX_URL=http://192.168.1.60:32400
         PLEX_TOKEN=your_plex_token_here
 
         # === RADARR SETTINGS ===
