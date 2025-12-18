@@ -2,6 +2,7 @@ version: "3.7"
 services:
   server:
     image: ghcr.io/taxel/plextraktsync:latest
+    container_name: foxace-plextraktsync
     environment:
       - PUID=1000
       - PGID=1000
@@ -13,22 +14,30 @@ services:
       - -c
       - |
         echo "=== PlexTraktSync ==="
-        echo "Synchronisation toutes les 2 heures"
 
-        # Verifier si la config existe
-        if [ ! -f /app/config/.env ]; then
-          echo "Configuration manquante!"
-          echo "Lancez: docker exec -it foxace-plextraktsync_server_1 plextraktsync"
-          echo "En attente de configuration..."
-          sleep infinity
+        # Verifier si login effectue
+        if [ ! -f /app/config/.pytrakt.json ]; then
+          echo ""
+          echo "Configuration requise!"
+          echo "Lancez cette commande pour configurer:"
+          echo ""
+          echo "  ssh umbrel@192.168.1.60"
+          echo "  docker exec -it foxace-plextraktsync plextraktsync login"
+          echo ""
+          echo "Puis redemarrez l'app."
+          echo ""
+          # Attendre indefiniment
+          tail -f /dev/null
         fi
 
-        # Boucle de sync
+        echo "Configuration trouvee. Demarrage sync..."
+
+        # Boucle de sync toutes les 6h
         while true; do
-          echo "[$(date)] Lancement sync..."
-          plextraktsync sync 2>&1 || true
-          echo "[$(date)] Prochaine sync dans 2 heures"
-          sleep 7200
+          echo "[$(date)] Lancement sync Plex <-> Trakt..."
+          plextraktsync sync || true
+          echo "[$(date)] Sync termine. Prochaine sync dans 6 heures."
+          sleep 21600
         done
     restart: on-failure
     networks:
