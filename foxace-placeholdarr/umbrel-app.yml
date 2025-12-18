@@ -4,7 +4,7 @@ name: Placeholdarr
 tagline: Placeholders pour contenus non telecharges dans Plex/Jellyfin
 icon: https://upandclear.org/wp-content/uploads/2025/10/chatgpt-image-25-oct.-2025-06_27_47-768x768.jpg
 category: media
-version: "1.0.9"
+version: "1.0.10"
 port: 8000
 description: >-
   Placeholdarr cree des fichiers placeholder legers pour le contenu indisponible, permettant de parcourir des collections media completes sans avoir besoin de tout telecharger.
@@ -26,7 +26,7 @@ support: https://github.com/TheIndieArmy/placeholdarr/issues
 gallery:
   - https://upandclear.org/wp-content/uploads/2025/10/chatgpt-image-25-oct.-2025-06_27_47-768x768.jpg
 releaseNotes: >-
-  v1.0.9: Nouveau .env complet avec support 4K, PostgreSQL, Jellyfin. URLs avec /api/v3.
+  v1.0.10: PLACEHOLDER_STRATEGY=copy, PREFERRED_MOVIE_DATE_TYPE=digitalRelease.
 dependencies: []
 path: ""
 defaultUsername: ""

@@ -95,7 +95,7 @@ services:
         # === PLACEHOLDER FILES ===
         DUMMY_FILE_PATH=/app/data/placeholder.mp4
         COMING_SOON_DUMMY_FILE_PATH=/app/data/coming_soon.mp4
-        PLACEHOLDER_STRATEGY=hardlink
+        PLACEHOLDER_STRATEGY=copy
 
         # === QUEUE MANAGEMENT ===
         TV_PLAY_MODE=episode
@@ -109,7 +109,7 @@ services:
         CALENDAR_LOOKAHEAD_DAYS=30
         CALENDAR_SYNC_INTERVAL_HOURS=12
         ENABLE_COMING_SOON_PLACEHOLDERS=true
-        PREFERRED_MOVIE_DATE_TYPE=inCinemas
+        PREFERRED_MOVIE_DATE_TYPE=digitalRelease
         ENABLE_COMING_SOON_COUNTDOWN=true
         CALENDAR_PLACEHOLDER_MODE=episode
 
