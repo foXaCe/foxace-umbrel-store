@@ -8,15 +8,14 @@ services:
       default:
   server:
     image: ghcr.io/mediux-team/aura:latest
-    user: "1000:1000"
     environment:
       - PUID=1000
       - PGID=1000
       - UMASK=0022
       - TZ=Europe/Paris
     volumes:
-      - ${APP_DATA_DIR}/data/config:/config
-      - ${UMBREL_ROOT}/home:/data/media:rslave
+      - ${APP_DATA_DIR}/data:/app/data
+      - ${UMBREL_ROOT}/home:/mnt:rslave
     restart: on-failure
     networks:
       default:
