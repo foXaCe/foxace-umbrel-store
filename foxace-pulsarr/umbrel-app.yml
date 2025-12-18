@@ -4,7 +4,7 @@ name: Pulsarr
 tagline: Surveillance watchlist Plex avec routage Sonarr/Radarr
 icon: https://raw.githubusercontent.com/jamcalli/Pulsarr/master/assets/icons/pulsarr.png
 category: media
-version: "1.0.0"
+version: "1.0.1"
 port: 3003
 description: >-
   Pulsarr surveille en temps reel les watchlists Plex et route automatiquement le contenu vers Sonarr et Radarr. Il permet un workflow d'approbation intelligent et supporte plusieurs utilisateurs sans connexions separees.
@@ -23,7 +23,7 @@ support: https://github.com/jamcalli/Pulsarr/issues
 gallery:
   - https://raw.githubusercontent.com/jamcalli/Pulsarr/master/assets/icons/pulsarr-lg.png
 releaseNotes: >-
-  v1.0.0: Version initiale avec interface web.
+  v1.0.1: Fix URLs icones.
 dependencies: []
 path: ""
 defaultUsername: ""
