@@ -1,0 +1,30 @@
+manifestVersion: 1
+id: foxace-posterizarr
+name: Posterizarr
+tagline: Generation automatique de posters pour Plex/Jellyfin
+icon: https://raw.githubusercontent.com/fscorrupt/Posterizarr/main/images/favicon.png
+category: media
+version: "1.0.0"
+port: 8000
+description: >-
+  Posterizarr genere automatiquement des posters pour votre mediatheque. Il recupere les artworks depuis Fanart.tv, TMDB, TVDB, Plex et IMDb, avec preference pour les images sans texte.
+
+
+  L'interface web permet de gerer les posters, ajouter des overlays personnalises et du texte. Compatible avec Plex, Jellyfin et Emby, avec organisation de dossiers compatible Kometa.
+
+
+  Fonctionnalites: generation automatique de posters, overlays personnalisables, integration Tautulli/Sonarr/Radarr, sources multiples (Fanart.tv, TMDB, TVDB), backup des assets.
+developer: fscorrupt
+website: https://github.com/fscorrupt/posterizarr
+submitter: foXaCe
+submission: https://github.com/foXaCe/foxace-umbrel-store
+repo: https://github.com/fscorrupt/posterizarr
+support: https://github.com/fscorrupt/posterizarr/issues
+gallery:
+  - https://raw.githubusercontent.com/fscorrupt/Posterizarr/main/images/favicon.png
+releaseNotes: >-
+  v1.0.0: Version initiale avec interface web.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
