@@ -2,7 +2,7 @@ manifestVersion: 1
 id: foxace-pulsarr
 name: Pulsarr
 tagline: Surveillance watchlist Plex avec routage Sonarr/Radarr
-icon: https://raw.githubusercontent.com/jamcalli/Pulsarr/main/apps/pulsarr/src/client/assets/logo.png
+icon: https://raw.githubusercontent.com/jamcalli/Pulsarr/main/assets/icons/pulsarr.png
 category: media
 version: "1.0.0"
 port: 3003
@@ -21,7 +21,7 @@ submission: https://github.com/foXaCe/foxace-umbrel-store
 repo: https://github.com/jamcalli/Pulsarr
 support: https://github.com/jamcalli/Pulsarr/issues
 gallery:
-  - https://raw.githubusercontent.com/jamcalli/Pulsarr/main/apps/pulsarr/src/client/assets/logo.png
+  - https://raw.githubusercontent.com/jamcalli/Pulsarr/main/assets/icons/pulsarr-lg.png
 releaseNotes: >-
   v1.0.0: Version initiale avec interface web.
 dependencies: []
