@@ -23,7 +23,7 @@ support: https://github.com/mediux-team/AURA/issues
 gallery:
   - https://raw.githubusercontent.com/mediux-team/AURA/master/frontend/public/aura_logo.png
 releaseNotes: >-
-  v1.0.3: Changement port 3000 vers 3080 (conflit AdGuard).
+  v1.0.3: Changement port 3000 vers 3080.
 dependencies: []
 path: ""
 defaultUsername: ""
