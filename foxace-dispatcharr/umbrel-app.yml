@@ -1,0 +1,30 @@
+manifestVersion: 1
+id: foxace-dispatcharr
+name: Dispatcharr
+tagline: Gestionnaire IPTV et streams pour Plex/Jellyfin
+icon: https://raw.githubusercontent.com/Dispatcharr/Dispatcharr/main/frontend/public/logo.png
+category: media
+version: "1.0.0"
+port: 9191
+description: >-
+  Dispatcharr est une plateforme de gestion IPTV et de streams. Le cousin IPTV de la famille *arr.
+
+
+  Import et organisation de flux IPTV via playlists M3U, gestion EPG avec auto-matching, support VOD pour films et series, dashboard statistiques en temps reel.
+
+
+  Compatible avec les formats HDHomeRun, Plex, Jellyfin. Backends Streamlink et FFmpeg supportes.
+developer: Dispatcharr
+website: https://github.com/Dispatcharr/Dispatcharr
+submitter: foXaCe
+submission: https://github.com/foXaCe/foxace-umbrel-store
+repo: https://github.com/Dispatcharr/Dispatcharr
+support: https://github.com/Dispatcharr/Dispatcharr/issues
+gallery:
+  - https://raw.githubusercontent.com/Dispatcharr/Dispatcharr/main/frontend/public/logo.png
+releaseNotes: >-
+  v1.0.0: Version initiale.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
