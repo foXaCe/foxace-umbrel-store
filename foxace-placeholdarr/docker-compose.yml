@@ -9,7 +9,7 @@ services:
   server:
     image: ghcr.io/theindiearmy/placeholdarr:queue_monitoring-latest
     ports:
-      - "8000:8000"
+      - "8383:8000"
     environment:
       - PLACEHOLDARR_HOST=0.0.0.0
       - PLACEHOLDARR_PORT=8000
