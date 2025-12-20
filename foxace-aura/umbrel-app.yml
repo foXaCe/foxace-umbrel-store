@@ -4,7 +4,7 @@ name: AURA
 tagline: Gestionnaire d'assets visuels pour Plex/Jellyfin/Emby
 icon: https://raw.githubusercontent.com/mediux-team/AURA/master/frontend/public/aura_logo.png
 category: media
-version: "1.0.2"
+version: "1.0.3"
 port: 3080
 description: >-
   AURA (Automated Utility for Retrieval of Assets) est un outil visuel pour gerer les assets d'image MediUX sur votre serveur media.
@@ -23,7 +23,7 @@ support: https://github.com/mediux-team/AURA/issues
 gallery:
   - https://raw.githubusercontent.com/mediux-team/AURA/master/frontend/public/aura_logo.png
 releaseNotes: >-
-  v1.0.2: Simplification config Docker.
+  v1.0.3: Changement port 3000 vers 3080 (conflit AdGuard).
 dependencies: []
 path: ""
 defaultUsername: ""
