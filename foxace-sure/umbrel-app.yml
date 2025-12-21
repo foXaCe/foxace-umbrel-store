@@ -4,7 +4,7 @@ name: Sure
 tagline: L'OS pour vos finances personnelles
 icon: https://avatars.githubusercontent.com/u/222344567?s=200&v=4
 category: finance
-version: "1.0.3"
+version: "1.0.4"
 port: 3063
 description: >-
   Sure est le fork communautaire de Maybe, une application open-source complete pour gerer vos finances personnelles.
@@ -28,7 +28,7 @@ gallery:
   - https://raw.githubusercontent.com/getumbrel/umbrel-apps/master/maybe/2.jpg
   - https://raw.githubusercontent.com/getumbrel/umbrel-apps/master/maybe/3.jpg
 releaseNotes: >-
-  v1.0.3: Fix Ruby 3.4 URI compatibility - change postgresql:// to postgres:// in DATABASE_URL.
+  v1.0.4: Fix Ruby 3.4 URI compatibility - use POSTGRES_HOST instead of DATABASE_URL.
 dependencies: []
 path: ""
 defaultUsername: "user@example.com"
