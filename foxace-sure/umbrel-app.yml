@@ -4,7 +4,7 @@ name: Sure
 tagline: L'OS pour vos finances personnelles
 icon: https://avatars.githubusercontent.com/u/222344567?s=200&v=4
 category: finance
-version: "1.0.0"
+version: "1.0.1"
 port: 3063
 description: >-
   Sure est le fork communautaire de Maybe, une application open-source complete pour gerer vos finances personnelles.
@@ -28,7 +28,7 @@ gallery:
   - https://raw.githubusercontent.com/getumbrel/umbrel-apps/master/maybe/2.jpg
   - https://raw.githubusercontent.com/getumbrel/umbrel-apps/master/maybe/3.jpg
 releaseNotes: >-
-  v1.0.0: Version initiale de Sure, fork communautaire de Maybe.
+  v1.0.1: Fix container naming for Docker Compose V2 and Redis permissions.
 dependencies: []
 path: ""
 defaultUsername: "user@example.com"
