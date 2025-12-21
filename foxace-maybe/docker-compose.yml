@@ -1,0 +1,95 @@
+version: '3.7'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: foxace-maybe_web_1
+      APP_PORT: 3063
+    networks:
+      default:
+
+  web:
+    image: ghcr.io/we-promise/sure:nightly
+    restart: on-failure
+    stop_grace_period: 1m
+    volumes:
+      - ${APP_DATA_DIR}/data/rails:/rails/storage
+    environment:
+      SELF_HOSTING_ENABLED: "true"
+      PORT: 3063
+      DATABASE_URL: postgresql://maybe:maybe@foxace-maybe%5Fdb%5F1:5432/maybe
+      RAILS_FORCE_SSL: "false"
+      RAILS_ASSUME_SSL: "false"
+      POSTGRES_DB: maybe
+      POSTGRES_USER: maybe
+      POSTGRES_PASSWORD: maybe
+      GOOD_JOB_EXECUTION_MODE: async
+      SECRET_KEY_BASE: $APP_SEED
+      REDIS_URL: redis://foxace-maybe_redis_1:6379/1
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      default:
+
+  worker:
+    image: ghcr.io/we-promise/sure:nightly
+    command: bundle exec sidekiq
+    restart: on-failure
+    environment:
+      SELF_HOSTING_ENABLED: "true"
+      PORT: 3063
+      DATABASE_URL: postgresql://maybe:maybe@foxace-maybe%5Fdb%5F1:5432/maybe
+      RAILS_FORCE_SSL: "false"
+      RAILS_ASSUME_SSL: "false"
+      POSTGRES_DB: maybe
+      POSTGRES_USER: maybe
+      POSTGRES_PASSWORD: maybe
+      GOOD_JOB_EXECUTION_MODE: async
+      SECRET_KEY_BASE: $APP_SEED
+      REDIS_URL: redis://foxace-maybe_redis_1:6379/1
+    depends_on:
+      redis:
+        condition: service_healthy
+    networks:
+      default:
+
+  db:
+    image: postgres:16
+    restart: on-failure
+    stop_grace_period: 1m
+    volumes:
+      - ${APP_DATA_DIR}/data/postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: maybe
+      POSTGRES_USER: maybe
+      POSTGRES_PASSWORD: maybe
+      PGDATA: /var/lib/postgresql/data/pgdata
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U maybe']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      default:
+
+  redis:
+    image: redis:7.4.2
+    user: "1000:1000"
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data/redis:/data
+    healthcheck:
+      test: [ "CMD", "redis-cli", "ping" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      default:
+
+networks:
+  default:
+    name: umbrel_main_network
+    external: true

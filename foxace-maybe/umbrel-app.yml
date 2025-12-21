@@ -1,0 +1,35 @@
+manifestVersion: 1
+id: foxace-maybe
+name: Maybe
+tagline: L'OS pour vos finances personnelles
+icon: https://raw.githubusercontent.com/we-promise/sure/main/public/apple-touch-icon.png
+category: finance
+version: "1.0.0"
+port: 3063
+description: >-
+  Maybe est une application open-source complete pour gerer vos finances personnelles. Developpee initialement par Maybe Finance Inc., elle est maintenant maintenue par la communaute via le fork Sure.
+
+
+  Fonctionnalites: suivez tous vos comptes bancaires, investissements, cryptomonnaies et biens immobiliers en un seul endroit. Visualisez vos depenses par categories, analysez vos tendances financieres et planifiez votre avenir.
+
+
+  Interface moderne avec mode sombre, support multi-langues (francais, anglais, allemand, espagnol, japonais, etc.) et chatbot IA optionnel pour des conseils personnalises.
+
+
+  100% auto-heberge - vos donnees financieres restent privees sur votre serveur Umbrel. Aucune dependance a des services externes.
+developer: We Promise (Community Fork)
+website: https://github.com/we-promise/sure
+submitter: foXaCe
+submission: https://github.com/foXaCe/foxace-umbrel-store
+repo: https://github.com/we-promise/sure
+support: https://github.com/we-promise/sure/issues
+gallery:
+  - https://raw.githubusercontent.com/getumbrel/umbrel-apps/master/maybe/1.jpg
+  - https://raw.githubusercontent.com/getumbrel/umbrel-apps/master/maybe/2.jpg
+  - https://raw.githubusercontent.com/getumbrel/umbrel-apps/master/maybe/3.jpg
+releaseNotes: >-
+  v1.0.0: Version initiale basee sur le fork communautaire Sure.
+dependencies: []
+path: ""
+defaultUsername: "user@example.com"
+defaultPassword: "Password1!"
