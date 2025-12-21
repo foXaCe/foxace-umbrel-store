@@ -17,7 +17,7 @@ services:
     environment:
       SELF_HOSTING_ENABLED: "true"
       PORT: 3063
-      DATABASE_URL: postgresql://maybe:maybe@foxace-sure_db_1:5432/maybe
+      DATABASE_URL: postgres://maybe:maybe@foxace-sure_db_1:5432/maybe
       RAILS_FORCE_SSL: "false"
       RAILS_ASSUME_SSL: "false"
       POSTGRES_DB: maybe
@@ -43,7 +43,7 @@ services:
     environment:
       SELF_HOSTING_ENABLED: "true"
       PORT: 3063
-      DATABASE_URL: postgresql://maybe:maybe@foxace-sure_db_1:5432/maybe
+      DATABASE_URL: postgres://maybe:maybe@foxace-sure_db_1:5432/maybe
       RAILS_FORCE_SSL: "false"
       RAILS_ASSUME_SSL: "false"
       POSTGRES_DB: maybe
