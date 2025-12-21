@@ -2,9 +2,9 @@ manifestVersion: 1
 id: foxace-claude-code
 category: developer
 name: Claude Code
-version: "1.0.0"
+version: "1.0.1"
 tagline: Agent IA de developpement avec controle Docker complet
-icon: https://raw.githubusercontent.com/Krigsexe/claude-umbrel/master/icon.svg
+icon: https://www.anthropic.com/images/icons/apple-touch-icon.png
 description: >-
   Claude Code est un agent IA autonome qui fonctionne dans votre navigateur et vous donne un controle complet sur votre environnement Umbrel.
 

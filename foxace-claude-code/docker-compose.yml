@@ -25,6 +25,8 @@ services:
       - ${UMBREL_ROOT}/app-data:/umbrel/app-data:ro
     networks:
       default:
+        aliases:
+          - claude-code
 
 networks:
   default:
