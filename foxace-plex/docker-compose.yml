@@ -4,29 +4,17 @@ services:
   server:
     image: binhex/arch-plexpass:latest
     restart: on-failure
-    hostname: "${DEVICE_HOSTNAME}"
-    ports:
-      - "32400:32400"
+    network_mode: host
     environment:
       - PUID=1000
       - PGID=1000
       - UMASK=000
       - TZ=Europe/Paris
       - PLEX_MEDIA_SERVER_APPLICATION_SUPPORT_DIR=/config
-      - PLEX_ALLOWED_NETWORKS=192.168.1.0/24
-      - ADVERTISE_IP=http://192.168.1.60:32400/
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
       - ${APP_DATA_DIR}/data/transcode:/transcode
       - ${UMBREL_ROOT}/home:/mnt:rslave
     devices:
       - /dev/dri:/dev/dri
-    networks:
-      default:
-        aliases:
-          - plex
-
-networks:
-  default:
-    name: umbrel_main_network
-    external: true
+    container_name: foxace-plex_server_1

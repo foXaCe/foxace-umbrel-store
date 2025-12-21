@@ -53,8 +53,8 @@ services:
         ENABLE_JELLYFIN=false
 
         # === PLEX (si ENABLE_PLEX=true) ===
-        # Utilise l'alias reseau 'plex' du conteneur foxace-plex
-        PLEX_URL=http://plex:32400
+        # Plex utilise network_mode:host, donc IP locale
+        PLEX_URL=http://192.168.1.60:32400
         PLEX_TOKEN=your_plex_token_here
         PLEX_MOVIE_SECTION_ID=1
         PLEX_TV_SECTION_ID=2
