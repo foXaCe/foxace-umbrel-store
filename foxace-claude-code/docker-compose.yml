@@ -1,0 +1,32 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: foxace-claude-code_server_1
+      APP_PORT: 7681
+      PROXY_AUTH_ADD: "false"
+
+  server:
+    image: krigsexe/claude-code-umbrel:v1.0.0
+    restart: on-failure
+    stop_grace_period: 1m
+    user: "1000:1000"
+    environment:
+      HOME: /home/claude
+      WORKSPACE_DIR: /workspace
+      ANTHROPIC_API_KEY: ${APP_CLAUDE_CODE_API_KEY:-}
+      TERM: xterm-256color
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ${APP_DATA_DIR}/data:/home/claude
+      - ${APP_DATA_DIR}/workspace:/workspace
+      - ${UMBREL_ROOT}/apps:/umbrel/apps:ro
+      - ${UMBREL_ROOT}/app-data:/umbrel/app-data:ro
+    networks:
+      default:
+
+networks:
+  default:
+    name: umbrel_main_network
+    external: true

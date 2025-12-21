@@ -1,0 +1,60 @@
+manifestVersion: 1
+id: foxace-claude-code
+category: developer
+name: Claude Code
+version: "1.0.0"
+tagline: Agent IA de developpement avec controle Docker complet
+icon: https://raw.githubusercontent.com/Krigsexe/claude-umbrel/master/icon.svg
+description: >-
+  Claude Code est un agent IA autonome qui fonctionne dans votre navigateur et vous donne un controle complet sur votre environnement Umbrel.
+
+
+  Avec Claude Code, vous pouvez gerer les conteneurs Docker, creer et modifier des applications Umbrel, et automatiser les taches de developpement en langage naturel.
+
+
+  Fonctionnalites:
+
+  - Controle Docker complet via terminal web
+
+  - Creation et gestion d'applications Umbrel
+
+  - Acces aux serveurs MCP (Model Context Protocol)
+
+  - Espace de travail persistant pour vos projets
+
+  - Authentification OAuth avec votre compte Anthropic
+
+
+  IMPORTANT: Cette application fournit un acces Docker equivalent a root. Claude Code peut controler TOUS les conteneurs sur votre Umbrel. A utiliser avec precaution.
+
+
+  Pour commencer, ouvrez l'application et executez 'claude auth login' pour vous authentifier avec votre compte Anthropic, puis tapez 'claude' pour demarrer.
+developer: Krigs (Proxitek)
+website: https://proxitek.fr
+repo: https://github.com/Krigsexe/claude-umbrel
+support: https://github.com/Krigsexe/claude-umbrel/issues
+port: 7681
+gallery:
+  - https://raw.githubusercontent.com/Krigsexe/claude-umbrel/master/1.png
+  - https://raw.githubusercontent.com/Krigsexe/claude-umbrel/master/2.png
+  - https://raw.githubusercontent.com/Krigsexe/claude-umbrel/master/3.png
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+torOnly: false
+releaseNotes: >-
+  Version initiale de Claude Code pour Umbrel OS:
+
+  - Interface terminal web via ttyd
+
+  - Acces complet au socket Docker pour la gestion des conteneurs
+
+  - Serveurs MCP pour Docker, systeme de fichiers et memoire
+
+  - Support de l'authentification OAuth
+
+  - Espace de travail et configuration persistants
+dependencies: []
+permissions: []
+submitter: foXaCe
+submission: https://github.com/foXaCe/foxace-umbrel-store
