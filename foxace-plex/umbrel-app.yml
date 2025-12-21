@@ -4,7 +4,7 @@ name: Plex
 tagline: Serveur multimedia personnel (version beta)
 icon: https://getumbrel.github.io/umbrel-apps-gallery/plex/icon.svg
 category: media
-version: "1.0.6"
+version: "1.0.7"
 port: 32400
 description: >-
   Plex organise vos collections de videos, musiques et photos et les diffuse sur tous vos appareils. Cette version utilise l'image binhex pour acceder aux versions beta de Plex Pass.
@@ -25,7 +25,7 @@ gallery:
   - https://getumbrel.github.io/umbrel-apps-gallery/plex/2.jpg
   - https://getumbrel.github.io/umbrel-apps-gallery/plex/3.jpg
 releaseNotes: >-
-  v1.0.6: Suppression du port mapping - app_proxy gere l'exposition du port.
+  v1.0.7: Port expose directement sans app_proxy pour acces streaming direct.
 dependencies: []
 path: "/web"
 defaultUsername: ""
