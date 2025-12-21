@@ -19,7 +19,7 @@ services:
       PORT: 3063
       RAILS_FORCE_SSL: "false"
       RAILS_ASSUME_SSL: "false"
-      POSTGRES_HOST: foxace-sure_db_1
+      DB_HOST: foxace-sure_db_1
       POSTGRES_DB: maybe
       POSTGRES_USER: maybe
       POSTGRES_PASSWORD: maybe
@@ -45,7 +45,7 @@ services:
       PORT: 3063
       RAILS_FORCE_SSL: "false"
       RAILS_ASSUME_SSL: "false"
-      POSTGRES_HOST: foxace-sure_db_1
+      DB_HOST: foxace-sure_db_1
       POSTGRES_DB: maybe
       POSTGRES_USER: maybe
       POSTGRES_PASSWORD: maybe
