@@ -2,7 +2,7 @@ manifestVersion: 1
 id: foxace-claude-code
 category: developer
 name: Claude Code
-version: "1.0.2"
+version: "1.0.3"
 tagline: Agent IA de developpement avec controle Docker complet
 icon: https://www.anthropic.com/images/icons/apple-touch-icon.png
 description: >-
@@ -43,7 +43,7 @@ defaultUsername: ""
 defaultPassword: ""
 torOnly: false
 releaseNotes: >-
-  v1.0.2: Correction des permissions Docker - suppression de la restriction utilisateur pour permettre l'acces au socket Docker.
+  v1.0.3: Permissions Docker securisees avec group_add (GID 987) au lieu de supprimer la restriction utilisateur.
 dependencies: []
 permissions: []
 submitter: foXaCe

@@ -11,6 +11,9 @@ services:
     image: krigsexe/claude-code-umbrel:v1.0.0
     restart: on-failure
     stop_grace_period: 1m
+    user: "1000:1000"
+    group_add:
+      - "987"
     environment:
       HOME: /home/claude
       WORKSPACE_DIR: /workspace
