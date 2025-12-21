@@ -24,7 +24,7 @@ services:
       - ${APP_DATA_DIR}/data:/home/claude
       - ${APP_DATA_DIR}/workspace:/workspace
       - ${UMBREL_ROOT}/apps:/umbrel/apps:ro
-      - ${UMBREL_ROOT}/app-data:/umbrel/app-data:ro
+      - ${UMBREL_ROOT}/app-data:/umbrel/app-data:rw
     networks:
       default:
         aliases:
