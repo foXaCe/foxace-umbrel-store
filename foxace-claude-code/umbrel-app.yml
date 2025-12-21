@@ -2,7 +2,7 @@ manifestVersion: 1
 id: foxace-claude-code
 category: developer
 name: Claude Code
-version: "1.0.1"
+version: "1.0.2"
 tagline: Agent IA de developpement avec controle Docker complet
 icon: https://www.anthropic.com/images/icons/apple-touch-icon.png
 description: >-
@@ -43,17 +43,7 @@ defaultUsername: ""
 defaultPassword: ""
 torOnly: false
 releaseNotes: >-
-  Version initiale de Claude Code pour Umbrel OS:
-
-  - Interface terminal web via ttyd
-
-  - Acces complet au socket Docker pour la gestion des conteneurs
-
-  - Serveurs MCP pour Docker, systeme de fichiers et memoire
-
-  - Support de l'authentification OAuth
-
-  - Espace de travail et configuration persistants
+  v1.0.2: Correction des permissions Docker - suppression de la restriction utilisateur pour permettre l'acces au socket Docker.
 dependencies: []
 permissions: []
 submitter: foXaCe
