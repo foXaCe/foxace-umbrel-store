@@ -118,7 +118,7 @@ services:
         # === OTHER ===
         INCLUDE_SPECIALS=false
         RESET_SUBFLOWS_ON_STARTUP=QUEUED,FAILED
-        PLACEHOLDARR_SKIP_WEBHOOK_CHECK=false
+        PLACEHOLDARR_SKIP_WEBHOOK_CHECK=true
         PLACEHOLDARR_WEBHOOK_URL=
 
         # === DATABASE (optionnel - PostgreSQL) ===
