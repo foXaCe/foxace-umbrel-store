@@ -1,0 +1,31 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    image: getumbrel/app-proxy:1.0.0
+    environment:
+      APP_HOST: foxace-avancarr_server_1
+      APP_PORT: 8001
+    volumes:
+      - ${APP_DATA_DIR}/umbrel-app.yml:/extra/umbrel-app.yml:ro
+    networks:
+      default:
+
+  server:
+    image: foxace/avancarr:latest
+    restart: on-failure
+    environment:
+      - AVANCARR_LOG_LEVEL=INFO
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/config
+      - ${UMBREL_ROOT}/home/Videos/radarr:/mnt/movies/placeholders
+      - ${UMBREL_ROOT}/home/Videos/sonarr:/mnt/tv/placeholders
+    networks:
+      default:
+        aliases:
+          - avancarr
+
+networks:
+  default:
+    name: umbrel_main_network
+    external: true
