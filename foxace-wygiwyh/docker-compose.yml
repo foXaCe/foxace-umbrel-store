@@ -27,6 +27,8 @@ services:
       - SQL_PORT=5432
       - WEB_CONCURRENCY=2
       - ENABLE_SOFT_DELETE=false
+      - ADMIN_EMAIL=admin@umbrel.local
+      - ADMIN_PASSWORD=umbrel
     depends_on:
       db:
         condition: service_healthy
