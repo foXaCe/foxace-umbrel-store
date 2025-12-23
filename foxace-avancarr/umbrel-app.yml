@@ -4,7 +4,7 @@ name: Avancarr
 tagline: Placeholders video pour medias a venir dans Plex/Jellyfin
 icon: https://upandclear.org/wp-content/uploads/2025/10/chatgpt-image-25-oct.-2025-06_27_47-768x768.jpg
 category: media
-version: "1.0.3"
+version: "1.0.4"
 port: 8001
 description: >-
   Avancarr cree des placeholders video dans vos bibliotheques Plex/Jellyfin pour les medias a venir de Sonarr/Radarr. Voyez vos series et films attendus directement dans votre media center, avec synchronisation automatique du calendrier.
