@@ -4,7 +4,7 @@ name: PruneMate
 tagline: Nettoyage automatique des ressources Docker
 icon: https://raw.githubusercontent.com/anoniemerd/PruneMate/main/static/prunemate.png
 category: developer
-version: "1.0.0"
+version: "1.0.1"
 port: 8080
 description: >-
   PruneMate est une interface web legere pour nettoyer automatiquement les ressources Docker selon un calendrier. Gerez les conteneurs, images, reseaux, volumes et cache de build inutilises.
