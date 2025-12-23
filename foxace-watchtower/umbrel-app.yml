@@ -14,12 +14,12 @@ description: >-
 
 
   Ideal pour maintenir vos apps Umbrel a jour sans intervention manuelle, surtout pour les images avec tag :latest.
-developer: containrrr
-website: https://containrrr.dev/watchtower/
+developer: nicholas-fedor
+website: https://github.com/nicholas-fedor/watchtower
 submitter: foXaCe
 submission: https://github.com/foXaCe/foxace-umbrel-store
-repo: https://github.com/containrrr/watchtower
-support: https://github.com/containrrr/watchtower/issues
+repo: https://github.com/nicholas-fedor/watchtower
+support: https://github.com/nicholas-fedor/watchtower/issues
 gallery:
   - https://containrrr.dev/watchtower/images/logo-450px.png
 releaseNotes: >-
