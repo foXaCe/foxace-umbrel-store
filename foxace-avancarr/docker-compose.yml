@@ -16,60 +16,30 @@ services:
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
-      - ${APP_DATA_DIR}/data/env:/app/envdir
       - ${UMBREL_ROOT}/home/Videos/radarr:/mnt/movies
       - ${UMBREL_ROOT}/home/Videos/sonarr:/mnt/tv
+    environment:
+      # Defaults - l'app lit depuis: settings.json > /config/.env > env vars > defaults
+      - AVANCARR_HOST=0.0.0.0
+      - AVANCARR_PORT=8001
+      - ENABLE_JELLYFIN=false
+      - ENABLE_EMBY=false
+      - MOVIE_LIBRARY_FOLDER=/mnt/movies
+      - TV_LIBRARY_FOLDER=/mnt/tv
+      - DUMMY_FILE_PATH=/config/dummy.mp4
+      - RADARR_URL=http://foxace-radarr_server_1:7878
+      - SONARR_URL=http://foxace-sonarr_server_1:8989
     entrypoint:
       - /bin/sh
       - -c
       - |
         # Create required directories
-        mkdir -p /config /app/envdir /mnt/movies /mnt/tv
+        mkdir -p /config /mnt/movies /mnt/tv
 
         # Create dummy video file if not exists
         if [ ! -f /config/dummy.mp4 ]; then
           echo "Creating dummy video file..."
           printf '\x00\x00\x00\x14ftypmp42\x00\x00\x00\x00mp42mp41' > /config/dummy.mp4
-        fi
-
-        # Setup .env file
-        if [ ! -f /app/.env ]; then
-          if [ -f /app/envdir/.env ]; then
-            ln -sf /app/envdir/.env /app/.env
-          else
-            cat > /app/envdir/.env << 'ENVEOF'
-        # Avancarr Configuration
-        # Editez ce fichier: ~/umbrel/app-data/foxace-avancarr/data/env/.env
-
-        # === SERVER ===
-        AVANCARR_HOST=0.0.0.0
-        AVANCARR_PORT=8001
-        AVANCARR_LOG_LEVEL=INFO
-
-        # === PLEX ===
-        PLEX_URL=http://192.168.1.60:32400
-        PLEX_TOKEN=your_plex_token_here
-        PLEX_MOVIE_LIBRARY_ID=1
-        PLEX_TV_LIBRARY_ID=2
-
-        # === RADARR ===
-        RADARR_URL=http://foxace-radarr_server_1:7878
-        RADARR_API_KEY=your_radarr_api_key_here
-
-        # === SONARR ===
-        SONARR_URL=http://foxace-sonarr_server_1:8989
-        SONARR_API_KEY=your_sonarr_api_key_here
-
-        # === LIBRARY FOLDERS ===
-        MOVIE_LIBRARY_FOLDER=/mnt/movies
-        TV_LIBRARY_FOLDER=/mnt/tv
-
-        # === PLACEHOLDER FILES ===
-        DUMMY_FILE_PATH=/config/dummy.mp4
-        ENVEOF
-            ln -sf /app/envdir/.env /app/.env
-            echo "Created default .env - configure it in ~/umbrel/app-data/foxace-avancarr/data/env/.env"
-          fi
         fi
 
         # Start the app
