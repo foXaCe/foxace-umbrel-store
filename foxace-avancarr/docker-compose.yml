@@ -16,7 +16,7 @@ services:
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
-      - ${UMBREL_ROOT}/home:/mnt:rslave
+      - /home/umbrel/umbrel/home:/mnt:rslave
     environment:
       # Defaults - l'app lit depuis: settings.json > /config/.env > env vars > defaults
       - AVANCARR_HOST=0.0.0.0
