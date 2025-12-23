@@ -1,0 +1,29 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: foxace-prunemate_server_1
+      APP_PORT: 8080
+    networks:
+      default:
+
+  server:
+    image: anoniemerd/prunemate:latest
+    restart: on-failure
+    environment:
+      - PRUNEMATE_TZ=Europe/Paris
+      - PRUNEMATE_TIME_24H=true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ${APP_DATA_DIR}/data/logs:/var/log
+      - ${APP_DATA_DIR}/data/config:/config
+    networks:
+      default:
+        aliases:
+          - prunemate
+
+networks:
+  default:
+    name: umbrel_main_network
+    external: true
