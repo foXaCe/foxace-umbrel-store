@@ -2,9 +2,9 @@ manifestVersion: 1
 id: foxace-avancarr
 name: Avancarr
 tagline: Placeholders video pour medias a venir dans Plex/Jellyfin
-icon: https://avatars.githubusercontent.com/u/13103735
+icon: https://raw.githubusercontent.com/foXaCe/foxace-umbrel-store/master/foxace-avancarr/icon.png
 category: media
-version: "1.0.0"
+version: "1.0.1"
 port: 8001
 description: >-
   Avancarr cree des placeholders video dans vos bibliotheques Plex/Jellyfin pour les medias a venir de Sonarr/Radarr. Voyez vos series et films attendus directement dans votre media center, avec synchronisation automatique du calendrier.
@@ -21,7 +21,7 @@ submission: https://github.com/foXaCe/foxace-umbrel-store
 repo: https://github.com/foXaCe
 support: https://github.com/foXaCe/foxace-umbrel-store/issues
 gallery:
-  - https://avatars.githubusercontent.com/u/13103735
+  - https://raw.githubusercontent.com/foXaCe/foxace-umbrel-store/master/foxace-avancarr/icon.png
 releaseNotes: >-
   Version initiale d'Avancarr pour Umbrel OS.
 dependencies: []
