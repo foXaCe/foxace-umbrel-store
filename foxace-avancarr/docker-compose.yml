@@ -16,30 +16,36 @@ services:
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
-      - ${UMBREL_ROOT}/home/Videos/radarr:/mnt/movies
-      - ${UMBREL_ROOT}/home/Videos/sonarr:/mnt/tv
+      - ${UMBREL_ROOT}/home:/mnt:rslave
     environment:
       # Defaults - l'app lit depuis: settings.json > /config/.env > env vars > defaults
       - AVANCARR_HOST=0.0.0.0
       - AVANCARR_PORT=8001
       - ENABLE_JELLYFIN=false
       - ENABLE_EMBY=false
-      - MOVIE_LIBRARY_FOLDER=/mnt/movies
-      - TV_LIBRARY_FOLDER=/mnt/tv
-      - DUMMY_FILE_PATH=/config/dummy.mp4
+      - MOVIE_LIBRARY_FOLDER=/mnt/Videos/radarr
+      - TV_LIBRARY_FOLDER=/mnt/Videos/sonarr
+      - DUMMY_FILE_PATH=/mnt/Documents/dummy.mp4
+      - COMING_SOON_DUMMY_FILE_PATH=/mnt/Documents/coming_soon_dummy.mp4
       - RADARR_URL=http://foxace-radarr_server_1:7878
       - SONARR_URL=http://foxace-sonarr_server_1:8989
     entrypoint:
       - /bin/sh
       - -c
       - |
-        # Create required directories
-        mkdir -p /config /mnt/movies /mnt/tv
+        # Create config directory
+        mkdir -p /config
 
-        # Create dummy video file if not exists
-        if [ ! -f /config/dummy.mp4 ]; then
+        # Create dummy video files if not exists
+        if [ ! -f /mnt/Documents/dummy.mp4 ]; then
           echo "Creating dummy video file..."
-          printf '\x00\x00\x00\x14ftypmp42\x00\x00\x00\x00mp42mp41' > /config/dummy.mp4
+          mkdir -p /mnt/Documents
+          printf '\x00\x00\x00\x14ftypmp42\x00\x00\x00\x00mp42mp41' > /mnt/Documents/dummy.mp4
+        fi
+        if [ ! -f /mnt/Documents/coming_soon_dummy.mp4 ]; then
+          echo "Creating coming soon dummy video file..."
+          mkdir -p /mnt/Documents
+          printf '\x00\x00\x00\x14ftypmp42\x00\x00\x00\x00mp42mp41' > /mnt/Documents/coming_soon_dummy.mp4
         fi
 
         # Start the app
