@@ -4,7 +4,7 @@ name: WYGIWYH
 tagline: Gestionnaire de finances personnelles sans budget
 icon: https://github.com/eitchtee/WYGIWYH/raw/main/.github/img/logo.png
 category: finance
-version: "1.0.1"
+version: "1.0.2"
 port: 8000
 description: >-
   WYGIWYH (What You Get Is What You Have) est un gestionnaire de finances personnelles base sur une philosophie sans budget. Le principe: utilisez les revenus du mois en cours pour les depenses courantes, avec les economies suivies separement comme reserves intouchables.
@@ -21,7 +21,9 @@ submission: https://github.com/foXaCe/foxace-umbrel-store
 repo: https://github.com/eitchtee/WYGIWYH
 support: https://github.com/eitchtee/WYGIWYH/issues
 gallery:
-  - https://github.com/eitchtee/WYGIWYH/raw/main/.github/img/logo.png
+  - https://github.com/eitchtee/WYGIWYH/raw/main/.github/img/all_transactions.png
+  - https://github.com/eitchtee/WYGIWYH/raw/main/.github/img/monthly_view.png
+  - https://github.com/eitchtee/WYGIWYH/raw/main/.github/img/networth.png
 releaseNotes: >-
   Version initiale de WYGIWYH pour Umbrel OS.
 dependencies: []
