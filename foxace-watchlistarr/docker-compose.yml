@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+  watchlistarr:
+    image: ghcr.io/nylonee/watchlistarr:latest
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/config
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Paris
+      # URLs des services Umbrel
+      - SONARR_BASE_URL=http://foxace-sonarr_server_1:8989
+      - RADARR_BASE_URL=http://foxace-radarr_server_1:7878
+      # Les API keys doivent etre configurees dans /config/config.yaml
+    networks:
+      default:
+        aliases:
+          - watchlistarr
+
+networks:
+  default:
+    name: umbrel_main_network
+    external: true
