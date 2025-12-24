@@ -4,7 +4,7 @@ name: Jellyfin
 tagline: Serveur multimedia libre et open source
 icon: https://getumbrel.github.io/umbrel-apps-gallery/jellyfin/icon.svg
 category: media
-version: "1.0.1"
+version: "1.0.2"
 port: 8096
 description: >-
   Jellyfin est une solution multimedia libre qui vous donne le controle total de vos medias. Streamez vers n'importe quel appareil depuis votre propre serveur, sans aucune restriction.

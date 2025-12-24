@@ -15,6 +15,6 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
       - ${APP_DATA_DIR}/data/cache:/cache
-      - ${UMBREL_ROOT}/home:/mnt:rslave
+      - /home/umbrel/umbrel/home:/mnt:rslave
     devices:
       - /dev/dri:/dev/dri
