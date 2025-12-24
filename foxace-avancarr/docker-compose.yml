@@ -18,6 +18,8 @@ services:
       - ${APP_DATA_DIR}/data/config:/config
       - /home/umbrel/umbrel/home:/mnt:rslave
     environment:
+      - PUID=1000
+      - PGID=1000
       # Defaults - l'app lit depuis: settings.json > /config/.env > env vars > defaults
       - AVANCARR_HOST=0.0.0.0
       - AVANCARR_PORT=8001
