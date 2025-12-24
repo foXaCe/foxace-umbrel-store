@@ -4,7 +4,7 @@ name: Watchlistarr
 tagline: Sync Plex watchlists avec Sonarr et Radarr
 icon: https://raw.githubusercontent.com/nylonee/watchlistarr/main/watchlistarr.png
 category: media
-version: "1.0.1"
+version: "1.0.2"
 port: 0
 description: >-
   Watchlistarr synchronise automatiquement vos watchlists Plex avec Sonarr et Radarr en temps reel.
@@ -13,7 +13,7 @@ description: >-
   Fonctionnalites: synchronisation en temps reel des watchlists Plex, support des watchlists d'amis, suppression synchronisee optionnelle, compatible Sonarr v3+ et Radarr v3+.
 
 
-  Configurez vos API keys dans le fichier config.yaml accessible dans ~/umbrel/app-data/foxace-watchlistarr/data/config/config.yaml
+  IMPORTANT: Apres installation, editez le docker-compose.yml dans ~/umbrel/app-data/foxace-watchlistarr/ pour configurer vos API keys (SONARR_API_KEY, RADARR_API_KEY, PLEX_TOKEN).
 
 
   Note: Necessite un abonnement Plex Pass pour un fonctionnement optimal.

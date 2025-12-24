@@ -5,15 +5,20 @@ services:
     image: nylonee/watchlistarr:latest
     restart: on-failure
     volumes:
-      - ${APP_DATA_DIR}/data/config:/config
+      - ${APP_DATA_DIR}/data/config:/app/config
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Europe/Paris
-      # URLs des services Umbrel
+      - SONARR_API_KEY=YOUR_SONARR_API_KEY
       - SONARR_BASE_URL=http://foxace-sonarr_server_1:8989
+      - RADARR_API_KEY=YOUR_RADARR_API_KEY
       - RADARR_BASE_URL=http://foxace-radarr_server_1:7878
-      # Les API keys doivent etre configurees dans /config/config.yaml
+      - PLEX_TOKEN=YOUR_PLEX_TOKEN
+    entrypoint:
+      - /bin/sh
+      - -c
+      - |
+        # Remove default config.yaml to force use of env vars
+        rm -f /app/config/config.yaml
+        exec java -jar watchlistarr.jar
     networks:
       default:
         aliases:
