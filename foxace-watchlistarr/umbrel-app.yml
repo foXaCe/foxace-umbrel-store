@@ -4,7 +4,7 @@ name: Watchlistarr
 tagline: Sync Plex watchlists avec Sonarr et Radarr
 icon: https://raw.githubusercontent.com/nylonee/watchlistarr/main/watchlistarr.png
 category: media
-version: "1.0.2"
+version: "1.0.3"
 port: 0
 description: >-
   Watchlistarr synchronise automatiquement vos watchlists Plex avec Sonarr et Radarr en temps reel.
