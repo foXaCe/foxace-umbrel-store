@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   server:
-    image: binhex/arch-plexpass:latest
+    image: lscr.io/linuxserver/emby:latest
     restart: on-failure
     network_mode: host
     environment:
@@ -10,11 +10,10 @@ services:
       - PGID=1000
       - UMASK=000
       - TZ=Europe/Paris
-      - PLEX_MEDIA_SERVER_APPLICATION_SUPPORT_DIR=/config
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
       - ${APP_DATA_DIR}/data/transcode:/transcode
       - /home/umbrel/umbrel/home:/mnt:rslave
     devices:
       - /dev/dri:/dev/dri
-    container_name: foxace-plex_server_1
+    container_name: foxace-emby_server_1

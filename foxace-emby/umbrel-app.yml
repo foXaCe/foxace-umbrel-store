@@ -1,0 +1,37 @@
+manifestVersion: 1
+id: foxace-emby
+name: Emby
+tagline: Serveur multimedia personnel
+icon: https://emby.media/resources/Logo_Dark.png
+category: media
+version: "1.0.0"
+port: 8096
+description: >-
+  Emby organise vos videos, musiques, photos et TV en direct dans une interface elegante et streamez vers n'importe quel appareil.
+
+
+  Le volume /mnt est configure pour acceder a vos medias depuis Radarr et Sonarr. Vos bibliotheques seront accessibles dans /mnt/Videos/radarr et /mnt/Videos/sonarr.
+
+
+  Cette version utilise network_mode host pour la decouverte reseau (DLNA, applications mobiles). Transcodage materiel active via /dev/dri.
+
+
+  Note: Emby utilise le port 8096 (meme que Jellyfin). Les deux ne peuvent pas tourner simultanement.
+
+
+  Fonctionnalites: streaming local et distant, transcodage materiel, TV en direct et DVR, synchronisation hors ligne, applications mobiles.
+developer: Emby
+website: https://emby.media
+submitter: foXaCe
+submission: https://github.com/foXaCe/foxace-umbrel-store
+repo: https://github.com/MediaBrowser/Emby
+support: https://emby.media/community
+gallery:
+  - https://emby.media/resources/aboutpage1.png
+  - https://emby.media/resources/aboutpage2.png
+releaseNotes: >-
+  Version initiale d'Emby pour Umbrel OS.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
