@@ -2,16 +2,14 @@ version: "3.7"
 
 services:
   server:
-    image: jellyfin/jellyfin:latest
+    image: lscr.io/linuxserver/jellyfin:latest
     restart: on-failure
     hostname: "${DEVICE_HOSTNAME}"
     network_mode: host
-    user: "1000:1000"
     environment:
+      - PUID=1000
+      - PGID=1000
       - TZ=Europe/Paris
-      - JELLYFIN_CONFIG_DIR=/config
-      - JELLYFIN_DATA_DIR=/config/data
-      - JELLYFIN_CACHE_DIR=/cache
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
       - ${APP_DATA_DIR}/data/cache:/cache
