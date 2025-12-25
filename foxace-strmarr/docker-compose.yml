@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+  strmarr:
+    image: ghcr.io/elad-bar/strmarr:latest
+    restart: on-failure
+    environment:
+      - PLAYARR_BASE_URL=http://foxace-playarr_server_1:3001
+      - PLAYARR_API_KEY=YOUR_PLAYARR_API_KEY
+      - MEDIA_PATH=/media
+      - SYNC_INTERVAL=0 * * * *
+    volumes:
+      - /home/umbrel/umbrel/home/Videos:/media:rw
+    networks:
+      default:
+        aliases:
+          - strmarr
+
+networks:
+  default:
+    name: umbrel_main_network
+    external: true

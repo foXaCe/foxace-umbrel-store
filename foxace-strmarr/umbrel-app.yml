@@ -1,0 +1,31 @@
+manifestVersion: 1
+id: foxace-strmarr
+name: Strmarr
+tagline: Synchronisation STRM pour Playarr
+icon: https://raw.githubusercontent.com/elad-bar/playarr/main/public/favicon.ico
+category: media
+version: "1.0.0"
+port: 0
+description: >-
+  Strmarr synchronise les fichiers STRM depuis Playarr vers vos bibliotheques multimedia. Il recupere la liste des medias depuis l'API Playarr et cree/met a jour les fichiers STRM automatiquement.
+
+
+  Service en arriere-plan sans interface web. Synchronisation programmee via cron (par defaut: toutes les heures).
+
+
+  IMPORTANT: Apres installation, editez le docker-compose.yml pour configurer PLAYARR_API_KEY avec votre cle API Playarr.
+developer: elad-bar
+website: https://github.com/elad-bar/strmarr
+submitter: foXaCe
+submission: https://github.com/foXaCe/foxace-umbrel-store
+repo: https://github.com/elad-bar/strmarr
+support: https://github.com/elad-bar/strmarr/issues
+gallery:
+  - https://raw.githubusercontent.com/elad-bar/playarr/main/public/favicon.ico
+releaseNotes: >-
+  Version initiale de Strmarr pour Umbrel OS.
+dependencies:
+  - foxace-playarr
+path: ""
+defaultUsername: ""
+defaultPassword: ""
