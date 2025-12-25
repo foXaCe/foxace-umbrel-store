@@ -1,10 +1,23 @@
 version: "3.7"
 
 services:
+  app_proxy:
+    image: getumbrel/app-proxy:1.0.0
+    environment:
+      APP_HOST: foxace-strmarr_strmarr_1
+      APP_PORT: 3002
+    volumes:
+      - ${APP_DATA_DIR}/umbrel-app.yml:/extra/umbrel-app.yml:ro
+    networks:
+      default:
+
   strmarr:
     image: ghcr.io/elad-bar/strmarr:latest
     restart: on-failure
     environment:
+      - PUID=1000
+      - PGID=1000
+      - PORT=3002
       - PLAYARR_BASE_URL=http://foxace-playarr_server_1:3001
       - PLAYARR_API_KEY=YOUR_PLAYARR_API_KEY
       - MEDIA_PATH=/media
