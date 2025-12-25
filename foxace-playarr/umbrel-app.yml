@@ -4,7 +4,7 @@ name: Playarr
 tagline: Gestionnaire de playlists IPTV
 icon: https://styles.redditmedia.com/t5_uxae6/styles/communityIcon_prkamhy0knnb1.png
 category: media
-version: "1.0.0"
+version: "1.0.1"
 port: 3001
 description: >-
   Playarr est un gestionnaire de playlists IPTV puissant qui vous permet d'agreger, organiser et acceder au contenu de plusieurs fournisseurs IPTV dans une plateforme unifiee.
