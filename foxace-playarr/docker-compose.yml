@@ -29,7 +29,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - NODE_ENV=production
+      - NODE_ENV=development
       - CACHE_DIR=/app/cache
       - LOGS_DIR=/app/logs
       - PORT=3001
