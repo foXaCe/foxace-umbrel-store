@@ -11,9 +11,21 @@ services:
     networks:
       default:
 
+  mongodb:
+    image: mongo:6
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data/mongodb:/data/db
+    networks:
+      default:
+        aliases:
+          - playarr-mongodb
+
   server:
     image: ghcr.io/elad-bar/playarr:latest
     restart: on-failure
+    depends_on:
+      - mongodb
     environment:
       - NODE_ENV=production
       - CACHE_DIR=/app/cache
@@ -22,6 +34,7 @@ services:
       - DEFAULT_ADMIN_USERNAME=admin
       - DEFAULT_ADMIN_PASSWORD=umbrel
       - JWT_SECRET_KEY=a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4y5z6
+      - MONGODB_URI=mongodb://foxace-playarr_mongodb_1:27017/playarr
     volumes:
       - ${APP_DATA_DIR}/data/cache:/app/cache
       - ${APP_DATA_DIR}/data/logs:/app/logs
