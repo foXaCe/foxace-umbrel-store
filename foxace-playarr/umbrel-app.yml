@@ -2,7 +2,7 @@ manifestVersion: 1
 id: foxace-playarr
 name: Playarr
 tagline: Gestionnaire de playlists IPTV
-icon: https://raw.githubusercontent.com/elad-bar/playarr/main/public/favicon.ico
+icon: https://styles.redditmedia.com/t5_uxae6/styles/communityIcon_prkamhy0knnb1.png
 category: media
 version: "1.0.0"
 port: 3001
@@ -21,7 +21,7 @@ submission: https://github.com/foXaCe/foxace-umbrel-store
 repo: https://github.com/elad-bar/playarr
 support: https://github.com/elad-bar/playarr/issues
 gallery:
-  - https://raw.githubusercontent.com/elad-bar/playarr/main/public/favicon.ico
+  - https://styles.redditmedia.com/t5_uxae6/styles/communityIcon_prkamhy0knnb1.png
 releaseNotes: >-
   Version initiale de Playarr pour Umbrel OS.
 dependencies: []
