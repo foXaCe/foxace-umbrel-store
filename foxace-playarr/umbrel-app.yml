@@ -1,0 +1,30 @@
+manifestVersion: 1
+id: foxace-playarr
+name: Playarr
+tagline: Gestionnaire de playlists IPTV
+icon: https://raw.githubusercontent.com/elad-bar/playarr/main/public/favicon.ico
+category: media
+version: "1.0.0"
+port: 3000
+description: >-
+  Playarr est un gestionnaire de playlists IPTV puissant qui vous permet d'agreger, organiser et acceder au contenu de plusieurs fournisseurs IPTV dans une plateforme unifiee.
+
+
+  Fonctionnalites: agregation de contenu de plusieurs fournisseurs (AGTV, Xtream Codec), deduplication intelligente, integration TMDB pour les metadonnees, addon Stremio integre.
+
+
+  Interface web moderne pour configurer vos fournisseurs et gerer votre bibliotheque IPTV.
+developer: elad-bar
+website: https://github.com/elad-bar/playarr
+submitter: foXaCe
+submission: https://github.com/foXaCe/foxace-umbrel-store
+repo: https://github.com/elad-bar/playarr
+support: https://github.com/elad-bar/playarr/issues
+gallery:
+  - https://raw.githubusercontent.com/elad-bar/playarr/main/public/favicon.ico
+releaseNotes: >-
+  Version initiale de Playarr pour Umbrel OS.
+dependencies: []
+path: ""
+defaultUsername: "admin"
+defaultPassword: "umbrel"
