@@ -5,7 +5,7 @@ services:
     image: getumbrel/app-proxy:1.0.0
     environment:
       APP_HOST: foxace-playarr_server_1
-      APP_PORT: 3000
+      APP_PORT: 3001
     volumes:
       - ${APP_DATA_DIR}/umbrel-app.yml:/extra/umbrel-app.yml:ro
     networks:
@@ -18,7 +18,7 @@ services:
       - NODE_ENV=production
       - CACHE_DIR=/app/cache
       - LOGS_DIR=/app/logs
-      - PORT=3000
+      - PORT=3001
       - DEFAULT_ADMIN_USERNAME=admin
       - DEFAULT_ADMIN_PASSWORD=umbrel
     volumes:

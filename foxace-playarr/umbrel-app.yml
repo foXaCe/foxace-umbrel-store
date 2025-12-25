@@ -5,7 +5,7 @@ tagline: Gestionnaire de playlists IPTV
 icon: https://raw.githubusercontent.com/elad-bar/playarr/main/public/favicon.ico
 category: media
 version: "1.0.0"
-port: 3000
+port: 3001
 description: >-
   Playarr est un gestionnaire de playlists IPTV puissant qui vous permet d'agreger, organiser et acceder au contenu de plusieurs fournisseurs IPTV dans une plateforme unifiee.
 
