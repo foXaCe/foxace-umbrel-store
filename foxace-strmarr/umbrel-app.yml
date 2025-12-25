@@ -4,7 +4,7 @@ name: Strmarr
 tagline: Synchronisation STRM pour Playarr
 icon: https://styles.redditmedia.com/t5_uxae6/styles/communityIcon_prkamhy0knnb1.png
 category: media
-version: "1.0.1"
+version: "1.0.2"
 port: 3002
 description: >-
   Strmarr synchronise les fichiers STRM depuis Playarr vers vos bibliotheques multimedia. Il recupere la liste des medias depuis l'API Playarr et cree/met a jour les fichiers STRM automatiquement.
