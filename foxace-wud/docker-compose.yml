@@ -1,0 +1,34 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    image: getumbrel/app-proxy:1.0.0
+    environment:
+      APP_HOST: foxace-wud_wud_1
+      APP_PORT: 3003
+    volumes:
+      - ${APP_DATA_DIR}/umbrel-app.yml:/extra/umbrel-app.yml:ro
+    networks:
+      default:
+
+  wud:
+    image: getwud/wud:latest
+    restart: on-failure
+    environment:
+      - WUD_PORT=3003
+      # Verification toutes les 6h
+      - WUD_WATCHER_LOCAL_CRON=0 */6 * * *
+      - WUD_WATCHER_LOCAL_WATCHBYDEFAULT=true
+      - TZ=Europe/Paris
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ${APP_DATA_DIR}/data:/store
+    networks:
+      default:
+        aliases:
+          - wud
+
+networks:
+  default:
+    name: umbrel_main_network
+    external: true

@@ -1,0 +1,30 @@
+manifestVersion: 1
+id: foxace-wud
+name: WUD
+tagline: What's Up Docker - Surveillez les mises a jour de vos containers
+icon: https://raw.githubusercontent.com/getwud/wud/main/docs/wud-logo.png
+category: developer
+version: "1.0.0"
+port: 3003
+description: >-
+  WUD (What's Up Docker) surveille vos containers Docker et vous notifie quand de nouvelles images sont disponibles.
+
+
+  Fonctionnalites: interface web moderne, detection automatique des mises a jour, support multi-registres (Docker Hub, GHCR, etc.), notifications (email, Slack, Discord, Apprise), declencheurs automatiques.
+
+
+  Contrairement a Watchtower, WUD ne met pas a jour automatiquement par defaut - il vous informe et vous laisse le controle.
+developer: getwud
+website: https://getwud.github.io/wud/
+submitter: foXaCe
+submission: https://github.com/foXaCe/foxace-umbrel-store
+repo: https://github.com/getwud/wud
+support: https://github.com/getwud/wud/issues
+gallery:
+  - https://raw.githubusercontent.com/getwud/wud/main/docs/wud-logo.png
+releaseNotes: >-
+  Version initiale de WUD pour Umbrel OS.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
