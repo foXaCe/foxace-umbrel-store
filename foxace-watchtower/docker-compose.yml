@@ -29,8 +29,6 @@ services:
       - WATCHTOWER_HTTP_API_PERIODIC_POLLS=true
       # Timezone
       - TZ=Europe/Paris
-    ports:
-      - "8080:8080"
     networks:
       default:
         aliases:
