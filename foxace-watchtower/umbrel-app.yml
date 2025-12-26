@@ -4,8 +4,8 @@ name: Watchtower
 tagline: Mise a jour automatique des containers Docker
 icon: https://raw.githubusercontent.com/containrrr/watchtower/main/logo.png
 category: developer
-version: "1.0.1"
-port: 8080
+version: "1.0.2"
+port: 8088
 description: >-
   Watchtower surveille vos containers Docker et les met a jour automatiquement quand de nouvelles images sont disponibles sur Docker Hub.
 

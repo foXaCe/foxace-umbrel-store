@@ -5,7 +5,7 @@ services:
     image: getumbrel/app-proxy:1.0.0
     environment:
       APP_HOST: foxace-watchtower_watchtower_1
-      APP_PORT: 8080
+      APP_PORT: 8088
     volumes:
       - ${APP_DATA_DIR}/umbrel-app.yml:/extra/umbrel-app.yml:ro
     networks:
@@ -27,6 +27,7 @@ services:
       - WATCHTOWER_HTTP_API_UPDATE=true
       - WATCHTOWER_HTTP_API_TOKEN=umbrel
       - WATCHTOWER_HTTP_API_PERIODIC_POLLS=true
+      - WATCHTOWER_HTTP_API_PORT=8088
       # Timezone
       - TZ=Europe/Paris
     networks:
