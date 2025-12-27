@@ -1,0 +1,28 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    image: getumbrel/app-proxy:1.0.0
+    environment:
+      APP_HOST: foxace-embycredits_tesseract_1
+      APP_PORT: 8884
+    volumes:
+      - ${APP_DATA_DIR}/umbrel-app.yml:/extra/umbrel-app.yml:ro
+    networks:
+      default:
+
+  tesseract:
+    image: hertzg/tesseract-server:latest
+    restart: on-failure
+    environment:
+      - PUID=1000
+      - PGID=1000
+    networks:
+      default:
+        aliases:
+          - embycredits
+
+networks:
+  default:
+    name: umbrel_main_network
+    external: true

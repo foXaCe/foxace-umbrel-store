@@ -1,0 +1,30 @@
+manifestVersion: 1
+id: foxace-embycredits
+name: EmbyCredits OCR
+tagline: Serveur OCR pour detection automatique des generiques Emby
+icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/emby.png
+category: media
+version: "1.0.0"
+port: 8884
+description: >-
+  EmbyCredits OCR est le serveur Tesseract necessaire pour le plugin EmbyCredits. Il detecte automatiquement les generiques de fin dans vos episodes TV en utilisant la reconnaissance optique de caracteres (OCR).
+
+
+  Le plugin Emby analyse les dernieres minutes de chaque episode, extrait des images et utilise l'OCR pour detecter les mots-cles des generiques.
+
+
+  IMPORTANT: Installez le plugin EmbyCredits dans Emby et configurez l'endpoint OCR vers http://foxace-embycredits_tesseract_1:8884 (ou l'IP de votre Umbrel:8884 si Emby est en network_mode host).
+developer: yocksers
+website: https://github.com/yocksers/EmbyCredits
+submitter: foXaCe
+submission: https://github.com/foXaCe/foxace-umbrel-store
+repo: https://github.com/yocksers/EmbyCredits
+support: https://github.com/yocksers/EmbyCredits/issues
+gallery:
+  - https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/emby.png
+releaseNotes: >-
+  Version initiale du serveur OCR EmbyCredits pour Umbrel OS.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
