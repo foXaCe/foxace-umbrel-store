@@ -4,7 +4,7 @@ name: Tuliprox
 tagline: Proxy IPTV et processeur de playlists en Rust
 icon: https://github.com/user-attachments/assets/8ef9ea79-62ff-4298-978f-22326c5c3d02
 category: media
-version: "1.0.3"
+version: "1.0.4"
 port: 8901
 description: >-
   Tuliprox est un proxy IPTV leger et performant ecrit en Rust. Il supporte M3U, Xtream Codes API, HDHomeRun et STRM pour filtrer, fusionner et servir des flux IPTV vers Plex, Jellyfin, Emby.

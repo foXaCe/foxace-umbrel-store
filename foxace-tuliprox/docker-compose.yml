@@ -30,7 +30,8 @@ services:
 
       threads: 2
       update_on_boot: false
-      web_ui_enabled: true
+      web_ui:
+        enabled: true
       EOF
           echo "Created default config.yml"
         fi
