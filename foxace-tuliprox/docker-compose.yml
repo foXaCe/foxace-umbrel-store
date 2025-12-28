@@ -11,9 +11,38 @@ services:
     networks:
       default:
 
+  # Init container to create default config
+  tuliprox-init:
+    image: busybox
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/config
+    command: |
+      sh -c '
+        if [ ! -f /config/config.yml ]; then
+          cat > /config/config.yml << EOF
+      api:
+        host: 0.0.0.0
+        port: 8901
+        web_root: /app/web
+
+      working_dir: /app/data
+      backup_dir: /app/backup
+
+      threads: 2
+      update_on_boot: false
+      web_ui_enabled: true
+      EOF
+          echo "Created default config.yml"
+        fi
+      '
+    networks:
+      default:
+
   tuliprox:
     image: ghcr.io/euzu/tuliprox:latest
     restart: on-failure
+    depends_on:
+      - tuliprox-init
     working_dir: /app
     environment:
       - PUID=1000
@@ -25,39 +54,7 @@ services:
       - ${APP_DATA_DIR}/data/backup:/app/backup
       - ${APP_DATA_DIR}/data/downloads:/app/downloads
       - /home/umbrel/umbrel/home:/mnt:rslave
-    entrypoint:
-      - /bin/sh
-      - -c
-      - |
-        # Create config.yml if not exists
-        if [ ! -f /app/config/config.yml ]; then
-          mkdir -p /app/config
-          cat > /app/config/config.yml << 'EOF'
-        # Tuliprox Configuration
-        # See https://github.com/euzu/tuliprox for documentation
-
-        api:
-          host: 0.0.0.0
-          port: 8901
-          web_root: /app/web
-
-        working_dir: /app/data
-        backup_dir: /app/backup
-
-        threads: 2
-        update_on_boot: false
-        web_ui_enabled: true
-        EOF
-          echo "Created default config.yml"
-        fi
-
-        # Link config.yml to /app if needed
-        if [ ! -f /app/config.yml ] && [ -f /app/config/config.yml ]; then
-          ln -sf /app/config/config.yml /app/config.yml
-        fi
-
-        # Start tuliprox
-        exec /app/tuliprox -s -c /app/config/config.yml
+    command: ["-s", "-c", "/app/config/config.yml"]
     networks:
       default:
         aliases:
