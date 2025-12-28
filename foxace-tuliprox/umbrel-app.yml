@@ -2,7 +2,7 @@ manifestVersion: 1
 id: foxace-tuliprox
 name: Tuliprox
 tagline: Proxy IPTV et processeur de playlists en Rust
-icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/iptv.png
+icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/threadfin.png
 category: media
 version: "1.0.0"
 port: 8901
@@ -21,7 +21,7 @@ submission: https://github.com/foXaCe/foxace-umbrel-store
 repo: https://github.com/euzu/tuliprox
 support: https://github.com/euzu/tuliprox/issues
 gallery:
-  - https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/iptv.png
+  - https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/threadfin.png
 releaseNotes: >-
   Version initiale de Tuliprox pour Umbrel OS.
 dependencies: []
