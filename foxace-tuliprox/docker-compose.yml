@@ -1,0 +1,36 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    image: getumbrel/app-proxy:1.0.0
+    environment:
+      APP_HOST: foxace-tuliprox_tuliprox_1
+      APP_PORT: 8901
+    volumes:
+      - ${APP_DATA_DIR}/umbrel-app.yml:/extra/umbrel-app.yml:ro
+    networks:
+      default:
+
+  tuliprox:
+    image: ghcr.io/euzu/tuliprox:latest
+    restart: on-failure
+    working_dir: /app
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Paris
+    volumes:
+      - ${APP_DATA_DIR}/data/data:/app/data
+      - ${APP_DATA_DIR}/data/config:/app/config
+      - ${APP_DATA_DIR}/data/backup:/app/backup
+      - ${APP_DATA_DIR}/data/downloads:/app/downloads
+      - /home/umbrel/umbrel/home:/mnt:rslave
+    networks:
+      default:
+        aliases:
+          - tuliprox
+
+networks:
+  default:
+    name: umbrel_main_network
+    external: true

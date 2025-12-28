@@ -1,0 +1,30 @@
+manifestVersion: 1
+id: foxace-tuliprox
+name: Tuliprox
+tagline: Proxy IPTV et processeur de playlists en Rust
+icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/iptv.png
+category: media
+version: "1.0.0"
+port: 8901
+description: >-
+  Tuliprox est un proxy IPTV leger et performant ecrit en Rust. Il supporte M3U, Xtream Codes API, HDHomeRun et STRM pour filtrer, fusionner et servir des flux IPTV vers Plex, Jellyfin, Emby.
+
+
+  Fonctionnalites: traitement avance des playlists (filtrage, renommage, tri), proxy redirect/reverse, gestion multi-sources, mises a jour programmees, interface web integree.
+
+
+  Parfait pour agreger plusieurs sources IPTV et les servir de maniere unifiee a vos media centers.
+developer: euzu
+website: https://github.com/euzu/tuliprox
+submitter: foXaCe
+submission: https://github.com/foXaCe/foxace-umbrel-store
+repo: https://github.com/euzu/tuliprox
+support: https://github.com/euzu/tuliprox/issues
+gallery:
+  - https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/iptv.png
+releaseNotes: >-
+  Version initiale de Tuliprox pour Umbrel OS.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
