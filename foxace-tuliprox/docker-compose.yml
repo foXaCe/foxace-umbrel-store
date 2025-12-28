@@ -54,7 +54,6 @@ services:
       - ${APP_DATA_DIR}/data/backup:/app/backup
       - ${APP_DATA_DIR}/data/downloads:/app/downloads
       - /home/umbrel/umbrel/home:/mnt:rslave
-    command: ["-s", "-c", "/app/config/config.yml"]
     networks:
       default:
         aliases:
