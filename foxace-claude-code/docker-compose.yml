@@ -23,8 +23,8 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - ${APP_DATA_DIR}/data:/home/claude
       - ${APP_DATA_DIR}/workspace:/workspace
-      - ${UMBREL_ROOT}/apps:/umbrel/apps:ro
-      - ${UMBREL_ROOT}/app-data:/umbrel/app-data:rw
+      - ${UMBREL_ROOT}:/umbrel:rw
+      - /home/umbrel:/home/umbrel:rw
     networks:
       default:
         aliases:

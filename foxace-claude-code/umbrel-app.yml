@@ -2,7 +2,7 @@ manifestVersion: 1
 id: foxace-claude-code
 category: developer
 name: Claude Code
-version: "1.0.5"
+version: "1.0.6"
 tagline: Agent IA de developpement avec controle Docker complet
 icon: https://www.anthropic.com/images/icons/apple-touch-icon.png
 description: >-
@@ -43,7 +43,7 @@ defaultUsername: ""
 defaultPassword: ""
 torOnly: false
 releaseNotes: >-
-  v1.0.5: Acces lecture-ecriture sur app-data pour modifier les configs des apps.
+  v1.0.6: Acces etendu au systeme - /umbrel et /home/umbrel en lecture-ecriture.
 dependencies: []
 permissions: []
 submitter: foXaCe
