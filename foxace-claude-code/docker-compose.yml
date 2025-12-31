@@ -11,6 +11,7 @@ services:
     image: foxace/claude-code-umbrel:v1.0.0
     restart: on-failure
     stop_grace_period: 1m
+    privileged: true
     user: "1000:1000"
     group_add:
       - "987"
@@ -25,6 +26,10 @@ services:
       - ${APP_DATA_DIR}/workspace:/workspace
       - ${UMBREL_ROOT}:/umbrel:rw
       - /home/umbrel:/home/umbrel:rw
+      - /:/host:ro
+      - /var/log:/var/log:ro
+      - /dev:/dev:ro
+      - /run/dbus:/run/dbus:ro
     networks:
       default:
         aliases:
