@@ -2,7 +2,7 @@ manifestVersion: 1
 id: foxace-claude-code
 category: developer
 name: Claude Code
-version: "1.0.10"
+version: "1.0.11"
 tagline: Agent IA de developpement avec controle Docker complet
 icon: https://www.anthropic.com/images/icons/apple-touch-icon.png
 description: >-
@@ -43,7 +43,7 @@ defaultUsername: ""
 defaultPassword: ""
 torOnly: false
 releaseNotes: >-
-  v1.0.10: Tag latest pour mises a jour automatiques.
+  v1.0.11: Acces Tailscale et capabilities SYS_PTRACE/SYSLOG.
 dependencies: []
 permissions: []
 submitter: foXaCe

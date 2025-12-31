@@ -12,6 +12,9 @@ services:
     restart: on-failure
     stop_grace_period: 1m
     privileged: true
+    cap_add:
+      - SYS_PTRACE
+      - SYSLOG
     user: "1000:1000"
     group_add:
       - "987"
@@ -30,6 +33,9 @@ services:
       - /var/log:/var/log:ro
       - /dev:/dev:ro
       - /run/dbus:/run/dbus:ro
+      - /usr/bin/tailscale:/usr/bin/tailscale:ro
+      - /usr/sbin/tailscaled:/usr/sbin/tailscaled:ro
+      - /run/tailscale:/run/tailscale
     networks:
       default:
         aliases:
