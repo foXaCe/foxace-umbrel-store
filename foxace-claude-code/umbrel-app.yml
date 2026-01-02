@@ -2,7 +2,7 @@ manifestVersion: 1
 id: foxace-claude-code
 category: developer
 name: Claude Code
-version: "1.0.12"
+version: "1.0.13"
 tagline: Agent IA de developpement avec controle Docker complet
 icon: https://www.anthropic.com/images/icons/apple-touch-icon.png
 description: >-
