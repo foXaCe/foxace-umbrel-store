@@ -4,7 +4,7 @@ name: Prowlarr
 tagline: Gestionnaire d'indexeurs pour Sonarr, Radarr et plus
 icon: https://getumbrel.github.io/umbrel-apps-gallery/prowlarr/icon.svg
 category: media
-version: "1.0.5"
+version: "1.0.6"
 port: 9696
 description: >-
   Prowlarr est un gestionnaire d'indexeurs concu pour s'integrer avec vos applications PVR comme Sonarr, Radarr, Lidarr et Readarr. Il supporte la gestion des trackers torrent et des indexeurs Usenet.

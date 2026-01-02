@@ -1,16 +1,9 @@
 version: "3.7"
 services:
-  app_proxy:
-    image: getumbrel/app-proxy:1.0.0
-    environment:
-      APP_HOST: foxace-sonarr_server_1
-      APP_PORT: 8989
-      PROXY_AUTH_WHITELIST: "/api/*"
-    networks:
-      default:
   server:
     image: ghcr.io/hotio/sonarr:nightly
     container_name: foxace-sonarr_server_1
+    restart: on-failure
     ports:
       - "8989:8989"
     environment:
@@ -22,7 +15,6 @@ services:
       - ${APP_DATA_DIR}/data/config:/config
       - /home/umbrel/umbrel/home:/data
       - /home/umbrel/umbrel/home:/mnt:rslave
-    restart: on-failure
     networks:
       default:
         aliases:

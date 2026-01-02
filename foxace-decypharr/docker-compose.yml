@@ -1,16 +1,9 @@
 version: "3.7"
 services:
-  app_proxy:
-    image: getumbrel/app-proxy:1.0.0
-    environment:
-      APP_HOST: foxace-decypharr_web_1
-      APP_PORT: 8282
-      PROXY_AUTH_WHITELIST: "/api/*"
-    networks:
-      default:
   web:
     image: ghcr.io/sirrobot01/decypharr:latest
     container_name: foxace-decypharr_web_1
+    restart: on-failure
     ports:
       - "8282:8282"
     volumes:
@@ -26,7 +19,6 @@ services:
       - PUID=1000
       - PGID=1000
       - UMASK=002
-    restart: on-failure
     networks:
       default:
         aliases:
