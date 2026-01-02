@@ -4,7 +4,7 @@ name: Sonarr
 tagline: PVR intelligent pour les series TV
 icon: https://getumbrel.github.io/umbrel-apps-gallery/sonarr/icon.svg
 category: media
-version: "1.0.9"
+version: "1.0.10"
 port: 8989
 description: >-
   Sonarr est un PVR (enregistreur video personnel) pour les utilisateurs Usenet et BitTorrent. Il surveille plusieurs flux RSS pour trouver de nouveaux episodes de vos series preferees et les telecharge, trie et renomme automatiquement.

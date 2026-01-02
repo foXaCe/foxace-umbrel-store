@@ -4,7 +4,7 @@ name: Agregarr
 tagline: Gestionnaire de collections Plex automatise
 icon: https://raw.githubusercontent.com/agregarr/agregarr/latest/public/os_icon_filled.svg
 category: media
-version: "1.0.1"
+version: "1.0.2"
 port: 7171
 description: >-
   Agregarr garde vos sections Accueil et Recommandations Plex toujours fraiches en les mettant a jour frequemment avec des collections de diverses sources.

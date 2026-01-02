@@ -14,8 +14,8 @@ services:
       - TZ=Europe/Paris
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
-      - ${UMBREL_ROOT}/home:/data
-      - ${UMBREL_ROOT}/home:/mnt:rslave
+      - /home/umbrel/umbrel/home:/data
+      - /home/umbrel/umbrel/home:/mnt:rslave
     restart: on-failure
     networks:
       default:

@@ -11,7 +11,7 @@ services:
     image: ghcr.io/sirrobot01/decypharr:latest
     volumes:
       - ${APP_DATA_DIR}/data/configs:/app
-      - ${UMBREL_ROOT}/home:/mnt:rshared
+      - /home/umbrel/umbrel/home:/mnt:rshared
     devices:
       - /dev/fuse:/dev/fuse:rwm
     cap_add:
