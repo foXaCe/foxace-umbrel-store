@@ -10,6 +10,9 @@ services:
       default:
   server:
     image: ghcr.io/hotio/prowlarr:nightly
+    container_name: foxace-prowlarr_server_1
+    ports:
+      - "9696:9696"
     environment:
       - PUID=1000
       - PGID=1000

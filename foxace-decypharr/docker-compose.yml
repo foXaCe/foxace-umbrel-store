@@ -10,6 +10,9 @@ services:
       default:
   web:
     image: ghcr.io/sirrobot01/decypharr:latest
+    container_name: foxace-decypharr_web_1
+    ports:
+      - "8282:8282"
     volumes:
       - ${APP_DATA_DIR}/data/configs:/app
       - /home/umbrel/umbrel/home:/mnt:rshared
