@@ -1,0 +1,44 @@
+manifestVersion: 1
+id: foxace-m3u-editor
+name: M3U Editor
+tagline: Editeur IPTV complet avec EPG, proxy et Xtream API
+icon: https://raw.githubusercontent.com/sparkison/m3u-editor/master/public/images/m3u-editor-icon.png
+category: media
+version: "1.0.0"
+port: 36400
+description: >-
+  M3U Editor est un editeur IPTV complet avec des fonctionnalites similaires a xTeVe ou Threadfin.
+
+
+  Fonctionnalites principales:
+
+  - Gestion complete des playlists M3U, M3U8 et Xtream Codes API
+
+  - Gestion EPG avec support XMLTV et Schedules Direct
+
+  - Proxy integre pour le streaming avec transcodage
+
+  - Generation de fichiers .strm pour Plex/Jellyfin/Emby
+
+  - Post-processing avec scripts personnalises et webhooks
+
+  - Interface web moderne et reactive
+
+
+  Ideal pour gerer vos sources IPTV, filtrer les chaines, fusionner des playlists et les servir a vos serveurs media.
+developer: Sparkison
+website: https://sparkison.github.io/m3u-editor-docs/
+repo: https://github.com/sparkison/m3u-editor
+support: https://github.com/sparkison/m3u-editor/issues
+gallery:
+  - https://raw.githubusercontent.com/sparkison/m3u-editor/master/public/images/screenshots/dashboard.png
+  - https://raw.githubusercontent.com/sparkison/m3u-editor/master/public/images/screenshots/playlist.png
+  - https://raw.githubusercontent.com/sparkison/m3u-editor/master/public/images/screenshots/epg.png
+releaseNotes: >-
+  v1.0.0: Version initiale avec proxy integre.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: foXaCe
+submission: https://github.com/foXaCe/foxace-umbrel-store
