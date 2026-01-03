@@ -2,9 +2,9 @@ manifestVersion: 1
 id: foxace-m3u-editor
 name: M3U Editor
 tagline: Editeur IPTV complet avec EPG, proxy et Xtream API
-icon: https://raw.githubusercontent.com/sparkison/m3u-editor/master/public/images/m3u-editor-icon.png
+icon: https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/xteve.png
 category: media
-version: "1.0.0"
+version: "1.0.1"
 port: 36400
 description: >-
   M3U Editor est un editeur IPTV complet avec des fonctionnalites similaires a xTeVe ou Threadfin.
