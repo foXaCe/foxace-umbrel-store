@@ -2,7 +2,7 @@ manifestVersion: 1
 id: foxace-m3u-editor
 name: M3U Editor
 tagline: Editeur IPTV complet avec EPG, proxy et Xtream API
-icon: https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/xteve.png
+icon: https://github.com/sparkison/m3u-editor/raw/master/public/favicon.png
 category: media
 version: "1.0.1"
 port: 36400
