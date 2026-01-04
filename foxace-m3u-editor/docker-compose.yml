@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   server:
-    image: sparkison/m3u-editor:latest
+    image: sparkison/m3u-editor:dev
     container_name: foxace-m3u-editor_server_1
     restart: on-failure
     ports:
