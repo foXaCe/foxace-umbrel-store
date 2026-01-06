@@ -18,6 +18,7 @@ services:
       - PGID=1000
     volumes:
       - ${APP_DATA_DIR}/data:/var/www/config
+      - ${APP_DATA_DIR}/postgres:/var/lib/postgresql/data
       - /home/umbrel/umbrel/home:/mnt:rslave
     networks:
       default:
