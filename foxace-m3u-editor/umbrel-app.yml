@@ -38,7 +38,7 @@ releaseNotes: >-
   v1.0.0: Version initiale avec proxy integre.
 dependencies: []
 path: ""
-defaultUsername: "admin"
+defaultUsername: "admin@test.com"
 defaultPassword: "admin"
 submitter: foXaCe
 submission: https://github.com/foXaCe/foxace-umbrel-store
