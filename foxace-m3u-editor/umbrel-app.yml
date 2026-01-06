@@ -4,7 +4,7 @@ name: M3U Editor
 tagline: Editeur IPTV complet avec EPG, proxy et Xtream API
 icon: https://github.com/sparkison/m3u-editor/raw/master/public/favicon.png
 category: media
-version: "1.0.5"
+version: "1.0.6"
 port: 36400
 description: >-
   M3U Editor est un editeur IPTV complet avec des fonctionnalites similaires a xTeVe ou Threadfin.
