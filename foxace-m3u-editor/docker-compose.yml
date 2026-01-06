@@ -9,7 +9,8 @@ services:
     environment:
       - TZ=Europe/Paris
       - APP_URL=http://192.168.1.60:36400
-      - M3U_PROXY_ENABLED=true
+      - M3U_PROXY_ENABLED=false
+      - REDIS_PASSWORD=
       - PUID=1000
       - PGID=1000
     volumes:
