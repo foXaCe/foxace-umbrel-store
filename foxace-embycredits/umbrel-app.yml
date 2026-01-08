@@ -4,7 +4,7 @@ name: EmbyCredits OCR
 tagline: Serveur OCR pour detection automatique des generiques Emby
 icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/emby.png
 category: media
-version: "1.0.0"
+version: "1.0.1"
 port: 8884
 description: >-
   EmbyCredits OCR est le serveur Tesseract necessaire pour le plugin EmbyCredits. Il detecte automatiquement les generiques de fin dans vos episodes TV en utilisant la reconnaissance optique de caracteres (OCR).
