@@ -11,9 +11,9 @@ services:
       - APP_URL=http://192.168.1.60
       - APP_PORT=36400
       - M3U_PROXY_ENABLED=false
-      - M3U_PROXY_URL=
       - REDIS_HOST=127.0.0.1
       - REDIS_PASSWORD=umbrelm3ueditor2025
+      - ENABLE_POSTGRES=true
       - PUID=1000
       - PGID=1000
     volumes:
