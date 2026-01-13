@@ -13,7 +13,12 @@ services:
       - M3U_PROXY_ENABLED=false
       - REDIS_HOST=127.0.0.1
       - REDIS_PASSWORD=umbrelm3ueditor2025
-      - ENABLE_POSTGRES=true
+      - DB_CONNECTION=pgsql
+      - DB_HOST=127.0.0.1
+      - DB_PORT=5432
+      - DB_DATABASE=m3ue
+      - DB_USERNAME=m3ue
+      - DB_PASSWORD=umbrelm3ue2025
       - PUID=1000
       - PGID=1000
     volumes:
