@@ -4,7 +4,7 @@ name: MCP Server
 tagline: Serveur Model Context Protocol pour Claude Code
 icon: https://unpkg.com/@lobehub/icons-static-png@latest/dark/mcp.png
 category: developer
-version: "1.0.3"
+version: "1.0.4"
 port: 3100
 description: >-
   MCP Server expose votre Umbrel via le protocole Model Context Protocol (MCP), permettant a Claude Code de se connecter et d'interagir directement avec votre NAS.
