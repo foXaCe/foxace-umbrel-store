@@ -21,6 +21,7 @@ echo "Port Shell MCP: $MCP_SHELL_PORT"
 # Démarrage du serveur Filesystem MCP via supergateway
 echo "Démarrage du serveur Filesystem MCP sur le port $MCP_FILESYSTEM_PORT..."
 npx -y supergateway \
+    --sse \
     --port $MCP_FILESYSTEM_PORT \
     --host 0.0.0.0 \
     --cors \
@@ -34,6 +35,7 @@ sleep 2
 # Démarrage du serveur Shell MCP via supergateway
 echo "Démarrage du serveur Shell MCP sur le port $MCP_SHELL_PORT..."
 npx -y supergateway \
+    --sse \
     --port $MCP_SHELL_PORT \
     --host 0.0.0.0 \
     --cors \
