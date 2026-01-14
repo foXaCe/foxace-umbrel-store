@@ -1,0 +1,37 @@
+version: "3.7"
+
+services:
+  server:
+    image: foxace/mcp-server-umbrel:latest
+    container_name: foxace-mcp-server_server_1
+    restart: on-failure
+    stop_grace_period: 30s
+    ports:
+      - "3100:3100"  # Filesystem MCP
+      - "3101:3101"  # Shell MCP
+    environment:
+      - MCP_FILESYSTEM_PORT=3100
+      - MCP_SHELL_PORT=3101
+      - ALLOWED_PATHS=/data,/umbrel,/host,/home/umbrel
+    volumes:
+      # Socket Docker pour contrôler les conteneurs
+      - /var/run/docker.sock:/var/run/docker.sock
+      # Données de l'app
+      - ${APP_DATA_DIR}/data:/data
+      # Accès à Umbrel
+      - ${UMBREL_ROOT}:/umbrel:rw
+      # Accès au home Umbrel
+      - /home/umbrel:/home/umbrel:rw
+      # Accès en lecture au système hôte
+      - /:/host:ro
+      # Logs système
+      - /var/log:/var/log:ro
+    networks:
+      default:
+        aliases:
+          - mcp-server
+
+networks:
+  default:
+    name: umbrel_main_network
+    external: true

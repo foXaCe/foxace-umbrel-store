@@ -1,0 +1,65 @@
+manifestVersion: 1
+id: foxace-mcp-server
+name: MCP Server
+tagline: Serveur Model Context Protocol pour Claude Code
+icon: https://unpkg.com/@lobehub/icons-static-png@latest/dark/mcp.png
+category: developer
+version: "1.0.0"
+port: 3100
+description: >-
+  MCP Server expose votre Umbrel via le protocole Model Context Protocol (MCP), permettant a Claude Code de se connecter et d'interagir directement avec votre NAS.
+
+
+  Avec MCP Server, Claude peut:
+
+  - Lire et ecrire des fichiers sur votre Umbrel
+
+  - Executer des commandes shell
+
+  - Gerer les conteneurs Docker (lister, logs, exec)
+
+  - Obtenir les informations systeme (CPU, RAM, disque)
+
+
+  Deux endpoints SSE sont exposes:
+
+  - Port 3100: Serveur Filesystem MCP
+
+  - Port 3101: Serveur Shell MCP (commandes, Docker, systeme)
+
+
+  Configuration Claude Code (ajoutez dans settings.json):
+
+  ```
+
+  {
+    "mcpServers": {
+      "umbrel-filesystem": {
+        "url": "http://192.168.1.60:3100/sse"
+      },
+      "umbrel-shell": {
+        "url": "http://192.168.1.60:3101/sse"
+      }
+    }
+  }
+
+  ```
+
+
+  IMPORTANT: Cette application donne un acces complet a votre systeme Umbrel. Les serveurs MCP ne sont pas authentifies - assurez-vous que seuls des appareils de confiance sur votre reseau local peuvent y acceder.
+developer: foXaCe (Proxitek)
+website: https://proxitek.fr
+submitter: foXaCe
+submission: https://github.com/foXaCe/foxace-umbrel-store
+repo: https://github.com/anthropics/modelcontextprotocol
+support: https://github.com/foXaCe/foxace-umbrel-store/issues
+gallery:
+  - https://modelcontextprotocol.io/images/mcp-diagram.png
+releaseNotes: >-
+  v1.0.0: Version initiale avec serveurs Filesystem et Shell MCP via SSE.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+torOnly: false
+permissions: []
