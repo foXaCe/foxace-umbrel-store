@@ -4,7 +4,7 @@ name: Sure
 tagline: L'OS pour vos finances personnelles
 icon: https://avatars.githubusercontent.com/u/222344567?s=200&v=4
 category: finance
-version: "1.0.5"
+version: "1.0.6"
 port: 3063
 description: >-
   Sure est le fork communautaire de Maybe, une application open-source complete pour gerer vos finances personnelles.
