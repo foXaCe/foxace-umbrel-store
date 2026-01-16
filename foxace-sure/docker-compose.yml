@@ -41,6 +41,8 @@ services:
     image: ghcr.io/we-promise/sure:nightly
     command: bundle exec sidekiq
     restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data/rails:/rails/storage
     environment:
       SELF_HOSTING_ENABLED: "true"
       PORT: 3063
