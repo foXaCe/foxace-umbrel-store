@@ -28,6 +28,8 @@ services:
       - /home/umbrel/umbrel/home:/mnt:rslave
     extra_hosts:
       - "new.premium-ott.live:185.160.192.33"
+    dns:
+      - 10.21.0.1
     networks:
       default:
         aliases:
