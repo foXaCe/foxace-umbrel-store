@@ -26,6 +26,8 @@ services:
       - ${APP_DATA_DIR}/data:/var/www/config
       - ${APP_DATA_DIR}/postgres:/var/lib/postgresql/data
       - /home/umbrel/umbrel/home:/mnt:rslave
+    extra_hosts:
+      - "new.premium-ott.live:185.160.192.33"
     networks:
       default:
         aliases:
