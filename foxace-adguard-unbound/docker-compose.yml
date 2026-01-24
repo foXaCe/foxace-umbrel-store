@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+  server:
+    image: imthai/adguardhome-unbound-redis:latest
+    container_name: foxace-adguard-unbound_server_1
+    restart: on-failure
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "3000:3000/tcp"
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/config
+    networks:
+      default:
+        aliases:
+          - adguard-unbound
+
+networks:
+  default:
+    name: umbrel_main_network
+    external: true
