@@ -4,16 +4,16 @@ name: AdGuard + Unbound + Redis
 tagline: DNS securise avec blocage de pubs, resolution recursive et cache Redis
 icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/adguard-home.png
 category: networking
-version: "1.0.0"
+version: "1.0.1"
 port: 3000
 description: >-
-  Solution DNS tout-en-un combinant AdGuard Home (blocage de pubs et trackers), Unbound (resolution DNS recursive) et Redis (cache en memoire).
+  Solution DNS tout-en-un pre-optimisee pour haute performance et faible latence, combinant AdGuard Home, Unbound et Redis.
 
 
-  AdGuard Home filtre les publicites et trackers au niveau DNS. Unbound resout les requetes DNS directement aupres des serveurs racine pour plus de confidentialite. Redis met en cache les reponses pour des performances optimales.
+  Optimisations incluses: Unbound Slabs alignes sur 4 (correspondant a num-threads) pour reduire la contention des locks. Redis avec 128MB de RAM et lazy-freeing active pour des suppressions non-bloquantes. Communication via socket Unix (/tmp/redis.sock) entre Unbound et Redis, evitant le overhead TCP.
 
 
-  Fonctionnalites: blocage de pubs et trackers, resolution DNS recursive sans intermediaire, cache Redis optimise (128MB), communication par socket Unix entre Unbound et Redis, support multi-architecture (amd64/arm64).
+  Latence moyenne 30-40ms (normal pour resolution recursive). Les cache hits sont quasi-instantanes (<1ms).
 
 
   3 listes de blocage activees par defaut: AdGuard DNS Filter, HaGeZi's Threat Intelligence Feeds, HaGeZi's Multi PRO.
