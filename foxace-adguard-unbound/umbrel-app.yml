@@ -1,10 +1,10 @@
 manifestVersion: 1
 id: foxace-adguard-unbound
-name: AdGuard + Unbound + Redis
+name: Adguard+
 tagline: DNS securise avec blocage de pubs, resolution recursive et cache Redis
 icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/adguard-home.png
 category: networking
-version: "1.0.1"
+version: "1.0.2"
 port: 3000
 description: >-
   Solution DNS tout-en-un pre-optimisee pour haute performance et faible latence, combinant AdGuard Home, Unbound et Redis.
