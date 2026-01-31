@@ -3,7 +3,7 @@ id: foxace-openclaw
 name: OpenClaw
 tagline: Assistant IA personnel, open source et auto-heberge
 category: ai
-version: "2026.1.31.1"
+version: "2026.1.31.2"
 port: 18789
 icon: https://openclaw.ai/apple-touch-icon.png
 path: ""

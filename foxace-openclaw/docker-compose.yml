@@ -19,4 +19,12 @@ services:
     restart: on-failure
     init: true
     stop_grace_period: 30s
-    command: ["node", "dist/index.js", "gateway", "--bind", "lan", "--port", "18789", "--allow-unconfigured"]
+    entrypoint: /bin/sh
+    command:
+      - -c
+      - |
+        mkdir -p /data/.openclaw &&
+        if [ ! -f /data/.openclaw/openclaw.json ]; then
+          echo '{"gateway":{"controlUi":{"allowInsecureAuth":true,"dangerouslyDisableDeviceAuth":true}}}' > /data/.openclaw/openclaw.json
+        fi &&
+        exec node dist/index.js gateway --bind lan --port 18789 --allow-unconfigured
