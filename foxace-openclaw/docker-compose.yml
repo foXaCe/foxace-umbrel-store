@@ -6,7 +6,7 @@ services:
       APP_PORT: 18789
   gateway:
     image: ghcr.io/openclaw/openclaw:latest
-    user: "1000:1000"
+    user: "0:0"
     environment:
       OPENCLAW_GATEWAY_TOKEN: "${APP_PASSWORD}"
       OPENCLAW_STATE_DIR: /data/.openclaw
@@ -24,8 +24,9 @@ services:
     command:
       - -c
       - |
+        apt-get update && apt-get install -y jq ripgrep ffmpeg gosu &&
         mkdir -p /data/.openclaw &&
         if [ ! -f /data/.openclaw/openclaw.json ]; then
           echo '{"gateway":{"controlUi":{"allowInsecureAuth":true,"dangerouslyDisableDeviceAuth":true}}}' > /data/.openclaw/openclaw.json
         fi &&
-        exec node dist/index.js gateway --bind lan --port 18789 --allow-unconfigured
+        exec gosu node node dist/index.js gateway --bind lan --port 18789 --allow-unconfigured
