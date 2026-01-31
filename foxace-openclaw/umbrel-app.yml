@@ -1,0 +1,45 @@
+manifestVersion: 1
+id: foxace-openclaw
+name: OpenClaw
+tagline: Assistant IA personnel, open source et auto-heberge
+category: ai
+version: "2026.1.29"
+port: 18789
+icon: https://openclaw.ai/apple-touch-icon.png
+path: ""
+description: >-
+  OpenClaw est un assistant IA auto-heberge qui se connecte a de multiples plateformes de messagerie (WhatsApp, Telegram, Discord, Slack, Signal, iMessage, Matrix, Google Chat, Microsoft Teams) et fournisseurs IA (Anthropic Claude, OpenAI, modeles locaux via Ollama).
+
+
+  Fonctionnalites:
+
+  - Integration multi-plateforme de messagerie
+
+  - Support Anthropic Claude, OpenAI et LLMs locaux
+
+  - Interface web Control UI pour la configuration
+
+  - Systeme de memoire et de skills
+
+  - Sessions par utilisateur ou par canal
+
+  - Automatisation navigateur integree
+
+  - Reconnaissance vocale et mode conversation
+
+  - Canvas pour espaces de travail visuels
+
+
+  Apres installation, ouvrez l'application et entrez le **mot de passe de l'app** dans le champ **Gateway Token** pour acceder a la Control UI. Configurez ensuite vos identifiants de fournisseur IA et connectez vos plateformes de messagerie.
+developer: OpenClaw
+website: https://openclaw.ai
+dependencies: []
+repo: https://github.com/openclaw/openclaw
+support: https://github.com/openclaw/openclaw/issues
+gallery: []
+releaseNotes: >-
+  v2026.1.29: Rebrand OpenClaw, migration auto des chemins legacy, support stickers Telegram, améliorations Gateway et Bridge.
+defaultUsername: ""
+deterministicPassword: true
+submitter: foXaCe
+submission: https://github.com/foXaCe/foxace-umbrel-store

@@ -1,0 +1,22 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: foxace-openclaw_gateway_1
+      APP_PORT: 18789
+  gateway:
+    image: ghcr.io/openclaw/openclaw:v2026.1.29@sha256:7b67c341d87f8e954dc1e8e9d7bb3aaeaf36acd49594abe4adb826ee89107170
+    user: "1000:1000"
+    environment:
+      OPENCLAW_GATEWAY_TOKEN: "${APP_PASSWORD}"
+      OPENCLAW_CONFIG_DIR: /data/.openclaw
+      OPENCLAW_WORKSPACE_DIR: /data/workspace
+      OPENCLAW_LOG_DIR: /data/logs
+      NODE_ENV: production
+      HOME: /home/node
+    volumes:
+      - "${APP_DATA_DIR}/data:/data"
+    restart: on-failure
+    init: true
+    stop_grace_period: 30s
+    command: ["node", "dist/index.mjs", "gateway", "--bind", "lan", "--port", "18789"]
