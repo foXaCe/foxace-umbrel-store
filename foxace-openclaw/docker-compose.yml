@@ -4,6 +4,7 @@ services:
     environment:
       APP_HOST: foxace-openclaw_gateway_1
       APP_PORT: 18789
+    container_name: foxace-openclaw_app_proxy_1
   gateway:
     image: ghcr.io/openclaw/openclaw:latest
     user: "0:0"
@@ -23,10 +24,15 @@ services:
     entrypoint: /bin/sh
     command:
       - -c
-      - |
-        apt-get update && apt-get install -y jq ripgrep ffmpeg gosu &&
+      - >
+        apt-get update -qq && apt-get install -y -qq jq ripgrep ffmpeg gosu >/dev/null 2>&1 ;
+
         mkdir -p /data/.openclaw &&
+
         if [ ! -f /data/.openclaw/openclaw.json ]; then
-          echo '{"gateway":{"controlUi":{"allowInsecureAuth":true,"dangerouslyDisableDeviceAuth":true}}}' > /data/.openclaw/openclaw.json
+          echo '{"gateway":{"controlUi":{"allowInsecureAuth":true,"dangerouslyDisableDeviceAuth":true}}}' > /data/.openclaw/openclaw.json ;
         fi &&
-        exec gosu node node dist/index.js gateway --bind lan --port 18789 --allow-unconfigured
+
+        exec gosu node node dist/index.js gateway --bind lan --port 18789
+        --allow-unconfigured
+    container_name: foxace-openclaw_gateway_1
