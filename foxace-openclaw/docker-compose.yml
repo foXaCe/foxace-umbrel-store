@@ -33,6 +33,8 @@ services:
           echo '{"gateway":{"controlUi":{"allowInsecureAuth":true,"dangerouslyDisableDeviceAuth":true}}}' > /data/.openclaw/openclaw.json ;
         fi &&
 
+        chown -R node:node /home/node/ &&
+
         exec gosu node node dist/index.js gateway --bind lan --port 18789
         --allow-unconfigured
     container_name: foxace-openclaw_gateway_1
