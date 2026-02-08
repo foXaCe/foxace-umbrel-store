@@ -1,0 +1,23 @@
+name: Sync umbrel-app.yml Version
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  update-umbrel-app:
+    if: github.actor == 'dependabot[bot]'
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+
+      - uses: CPardi/update-umbrel-app-action@v0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
