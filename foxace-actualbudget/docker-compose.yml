@@ -12,6 +12,7 @@ services:
     restart: on-failure
     ports:
       - "5008:5008"
+      - "5009:5009"
     volumes:
       - ${APP_DATA_DIR}/Caddyfile:/etc/caddy/Caddyfile:ro
       - ${APP_DATA_DIR}/caddy_data:/data
