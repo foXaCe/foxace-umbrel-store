@@ -21,3 +21,9 @@ jobs:
       - uses: CPardi/update-umbrel-app-action@v0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Auto-merge Dependabot PR
+        run: gh pr merge --auto --merge "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
