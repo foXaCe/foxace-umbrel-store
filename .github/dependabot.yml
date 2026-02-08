@@ -3,132 +3,132 @@ updates:
   - package-ecosystem: docker
     directory: /foxace-actualbudget
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-adguard-unbound
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-agregarr
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-aura
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-avancarr
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-blockbusterr
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-claude-code
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-configarr
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-decypharr
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-dispatcharr
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-emby
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-embycredits
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-jellyfin
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-m3u-editor
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-mcp-server
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-openclaw
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-plex
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-plextraktsync
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-posterizarr
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-prunemate
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-pulsarr
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-playarr
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-strmarr
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-suggestarr
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-watchlistarr
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-wud
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-wygiwyh
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-placeholdarr
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-prowlarr
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-radarr
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-sonarr
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: docker
     directory: /foxace-sure
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: github-actions
     directory: /
     schedule:
-      interval: weekly
+      interval: daily
