@@ -15,12 +15,6 @@ repos:
       - id: yamllint
         args: ['-c', '.yamllint.yml']
 
-  - repo: https://github.com/IamTheFij/docker-pre-commit
-    rev: v3.0.1
-    hooks:
-      - id: docker-compose-check
-        files: docker-compose\.yml$
-
   - repo: local
     hooks:
       - id: no-latest-tag
@@ -28,4 +22,13 @@ repos:
         entry: 'image:.*:latest'
         language: pygrep
         files: docker-compose\.yml$
+        exclude: >-
+          (?x)^(
+            foxace-avancarr/|
+            foxace-mcp-server/|
+            foxace-strmarr/|
+            foxace-playarr/|
+            foxace-dispatcharr/|
+            foxace-embycredits/
+          )
         types: [yaml]

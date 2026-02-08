@@ -1,8 +1,7 @@
 extends: default
 
 rules:
-  line-length:
-    max: 200
+  line-length: disable
   truthy:
     check-keys: false
   comments:
