@@ -11,7 +11,7 @@ services:
     image: caddy:2-alpine
     restart: on-failure
     ports:
-      - "5007:5007"
+      - "5008:5008"
     volumes:
       - ${APP_DATA_DIR}/Caddyfile:/etc/caddy/Caddyfile:ro
       - ${APP_DATA_DIR}/caddy_data:/data
