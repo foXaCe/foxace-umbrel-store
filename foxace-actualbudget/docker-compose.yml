@@ -3,15 +3,11 @@ version: '3.9'
 services:
   app_proxy:
     environment:
-      APP_HOST: foxace-actualbudget_caddy_1
-      APP_PORT: 8080
+      APP_HOST: foxace-actualbudget_web_1
+      APP_PORT: 5006
       PROXY_AUTH_ADD: "false"
-
-  caddy:
-    image: caddy:2-alpine
-    restart: on-failure
     volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./nginx-headers.conf:/etc/nginx/conf.d/headers.conf:ro
 
   web:
     image: actualbudget/actual-server:latest

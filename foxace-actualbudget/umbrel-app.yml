@@ -4,7 +4,7 @@ name: Actual Budget
 tagline: A super fast privacy-focused app for managing your finances
 icon: https://raw.githubusercontent.com/dennysubke/dennys-umbrel-app-gallery/main/denny-actualbudget/logo.png
 category: finance
-version: "26.2.2"
+version: "26.2.3"
 port: 5006
 description: >-
   Actual Budget est un outil de finances personnelles axe sur la confidentialite, concu pour que les utilisateurs hebergent leurs donnees et gerent leurs budgets avec un controle total. Il offre un suivi budgetaire en temps reel, un suivi detaille des depenses et des rapports avances.

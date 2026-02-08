@@ -1,7 +1,0 @@
-:8080 {
-	reverse_proxy web:5006
-	header {
-		Cross-Origin-Opener-Policy "same-origin"
-		Cross-Origin-Embedder-Policy "require-corp"
-	}
-}
