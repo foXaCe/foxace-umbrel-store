@@ -1,4 +1,4 @@
-FROM node:20-slim
+FROM node:25-slim
 
 LABEL maintainer="foXaCe"
 LABEL description="MCP Server pour Umbrel - Expose filesystem, shell et docker via SSE"
