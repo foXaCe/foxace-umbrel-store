@@ -11,7 +11,7 @@ services:
       default:
 
   server:
-    image: foxace/claude-code-umbrel:latest
+    image: foxace/claude-code-umbrel:v1.0.0
     restart: on-failure
     stop_grace_period: 1m
     privileged: true

@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   server:
-    image: lscr.io/linuxserver/jellyfin:latest
+    image: lscr.io/linuxserver/jellyfin:10.11.6
     restart: on-failure
     hostname: "${DEVICE_HOSTNAME}"
     network_mode: host

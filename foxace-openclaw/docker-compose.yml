@@ -6,7 +6,7 @@ services:
       APP_PORT: 18789
     container_name: foxace-openclaw_app_proxy_1
   gateway:
-    image: ghcr.io/openclaw/openclaw:latest
+    image: ghcr.io/openclaw/openclaw:2026.2.6-3
     user: "0:0"
     environment:
       OPENCLAW_GATEWAY_TOKEN: "${APP_PASSWORD}"

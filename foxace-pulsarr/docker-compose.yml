@@ -8,7 +8,7 @@ services:
     networks:
       default:
   server:
-    image: lakker/pulsarr:latest
+    image: lakker/pulsarr:0.11.0
     environment:
       - TZ=Europe/Paris
       - PORT=3003

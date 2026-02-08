@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   server:
-    image: foxace/m3u-editor:latest
+    image: foxace/m3u-editor:2026-01-10
     container_name: foxace-m3u-editor_server_1
     restart: on-failure
     ports:

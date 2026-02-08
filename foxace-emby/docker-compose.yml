@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   server:
-    image: lscr.io/linuxserver/emby:latest
+    image: lscr.io/linuxserver/emby:4.9.3
     restart: on-failure
     network_mode: host
     environment:

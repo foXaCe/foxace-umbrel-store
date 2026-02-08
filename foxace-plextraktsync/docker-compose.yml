@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   server:
-    image: ghcr.io/taxel/plextraktsync:latest
+    image: ghcr.io/taxel/plextraktsync:0.21.2
     container_name: foxace-plextraktsync
     environment:
       - PUID=1000

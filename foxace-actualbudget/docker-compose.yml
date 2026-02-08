@@ -25,7 +25,7 @@ services:
       "
 
   web:
-    image: actualbudget/actual-server:latest
+    image: actualbudget/actual-server:26.2.0
     user: 1000:1000
     restart: on-failure
     environment:

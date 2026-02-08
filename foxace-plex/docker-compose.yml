@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   server:
-    image: binhex/arch-plexpass:latest
+    image: binhex/arch-plexpass:1.43
     restart: on-failure
     network_mode: host
     environment:

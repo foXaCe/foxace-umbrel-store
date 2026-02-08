@@ -9,7 +9,7 @@ services:
     networks:
       default:
   server:
-    image: ghcr.io/raydak-labs/configarr:latest
+    image: ghcr.io/raydak-labs/configarr:1.20
     environment:
       - TZ=Europe/Paris
       - PUID=1000

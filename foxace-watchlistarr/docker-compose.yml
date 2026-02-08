@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   watchlistarr:
-    image: ghcr.io/nylonee/watchlistarr:latest
+    image: ghcr.io/nylonee/watchlistarr:0.2.6
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data/config:/app/config
