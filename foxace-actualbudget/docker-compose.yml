@@ -13,6 +13,6 @@ services:
     restart: on-failure
     environment:
       - ACTUAL_PORT=5006
-      - ACTUAL_TRUSTED_PROXIES=umbrel.local,umbrel
+      - ACTUAL_TRUSTED_PROXIES=10.21.0.0/16
     volumes:
       - ${APP_DATA_DIR}/data:/data
