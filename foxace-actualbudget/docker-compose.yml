@@ -13,7 +13,7 @@ services:
     ports:
       - "5007:5007"
     volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ${APP_DATA_DIR}/Caddyfile:/etc/caddy/Caddyfile:ro
       - ${APP_DATA_DIR}/caddy_data:/data
 
   web:
