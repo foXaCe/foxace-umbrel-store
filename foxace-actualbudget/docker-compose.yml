@@ -6,8 +6,15 @@ services:
       APP_HOST: foxace-actualbudget_web_1
       APP_PORT: 5006
       PROXY_AUTH_ADD: "false"
+
+  caddy:
+    image: caddy:2-alpine
+    restart: on-failure
+    ports:
+      - "5007:5007"
     volumes:
-      - ./nginx-headers.conf:/etc/nginx/conf.d/headers.conf:ro
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ${APP_DATA_DIR}/caddy_data:/data
 
   web:
     image: actualbudget/actual-server:latest
