@@ -3,18 +3,29 @@ version: '3.9'
 services:
   app_proxy:
     environment:
-      APP_HOST: foxace-actualbudget_caddy_1
+      APP_HOST: foxace-actualbudget_nginx_1
       APP_PORT: 5008
       PROXY_AUTH_ADD: "false"
 
-  caddy:
-    image: caddy:2-alpine
+  nginx:
+    image: nginx:alpine
     restart: on-failure
     ports:
       - "5009:5009"
     volumes:
-      - ${APP_DATA_DIR}/Caddyfile:/etc/caddy/Caddyfile:ro
-      - ${APP_DATA_DIR}/caddy_data:/data
+      - ${APP_DATA_DIR}/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ${APP_DATA_DIR}/ssl:/etc/nginx/ssl
+    command: >
+      sh -c "
+        if [ ! -f /etc/nginx/ssl/cert.pem ]; then
+          apk add --no-cache openssl &&
+          openssl req -x509 -nodes -days 3650 -newkey rsa:2048
+            -keyout /etc/nginx/ssl/key.pem
+            -out /etc/nginx/ssl/cert.pem
+            -subj '/CN=192.168.1.60';
+        fi &&
+        nginx -g 'daemon off;'
+      "
 
   web:
     image: actualbudget/actual-server:latest
