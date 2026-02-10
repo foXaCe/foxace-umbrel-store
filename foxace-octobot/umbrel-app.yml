@@ -1,0 +1,29 @@
+manifestVersion: 1
+id: foxace-octobot
+name: OctoBot
+tagline: Bot de trading crypto open source avec IA et strategies automatisees
+icon: https://avatars.githubusercontent.com/u/42610012?s=256
+category: finance
+version: "2.0.16"
+port: 5001
+description: >-
+  OctoBot est un bot de trading crypto gratuit et open source qui permet d'automatiser vos strategies sur Binance, Hyperliquid et plus de 15 exchanges. Il supporte les strategies Grid, DCA, TradingView et IA avec une interface simple et intuitive.
+
+
+  Configurez vos strategies de trading, connectez vos exchanges via API et laissez OctoBot trader automatiquement 24h/24. L'interface web integree permet de suivre vos performances, ajuster vos parametres et gerer vos portefeuilles en temps reel.
+
+
+  Fonctionnalites principales: trading automatise multi-exchange, strategies Grid/DCA/IA, integration TradingView, backtesting, interface web, notifications Telegram/Discord, support spot et futures, portfolio tracker.
+developer: Drakkar Software
+website: https://www.octobot.cloud
+submitter: foXaCe
+submission: https://github.com/foXaCe/foxace-umbrel-store
+repo: https://github.com/Drakkar-Software/OctoBot
+support: https://github.com/Drakkar-Software/OctoBot/issues
+gallery: []
+releaseNotes: >-
+  Version initiale 2.0.16.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
