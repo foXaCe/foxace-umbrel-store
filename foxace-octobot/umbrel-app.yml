@@ -4,7 +4,7 @@ name: OctoBot
 tagline: Bot de trading crypto open source avec IA et strategies automatisees
 icon: https://play-lh.googleusercontent.com/D85iW86j3yhT2CrEkutMe8jkOVkVUbd4SFKrbzAoC-IAGwFsLrkT87_p0A1ea1f9KQ=w600-h300-pc0xffffff-pd
 category: finance
-version: "2.0.16"
+version: "2.0.17"
 port: 5001
 description: >-
   OctoBot est un bot de trading crypto gratuit et open source qui permet d'automatiser vos strategies sur Binance, Hyperliquid et plus de 15 exchanges. Il supporte les strategies Grid, DCA, TradingView et IA avec une interface simple et intuitive.
