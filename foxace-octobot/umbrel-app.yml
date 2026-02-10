@@ -2,7 +2,7 @@ manifestVersion: 1
 id: foxace-octobot
 name: OctoBot
 tagline: Bot de trading crypto open source avec IA et strategies automatisees
-icon: https://avatars.githubusercontent.com/u/42610012?s=256
+icon: https://play-lh.googleusercontent.com/D85iW86j3yhT2CrEkutMe8jkOVkVUbd4SFKrbzAoC-IAGwFsLrkT87_p0A1ea1f9KQ=w600-h300-pc0xffffff-pd
 category: finance
 version: "2.0.16"
 port: 5001
